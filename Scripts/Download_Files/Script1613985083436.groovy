@@ -41,11 +41,8 @@ WebUI.navigateToUrl("https://file-examples.com/index.php/text-files-and-archives
 
 WebUI.scrollToElement(findTestObject('Object Repository/file_upload/search_box_object'), 30)
 WebUI.click(findTestObject('Object Repository/file_upload/csv_file_down_link'))
-//WebElement element = WebUiCommonHelper.findWebElement(findTestObject('Object Repository/file_upload/csv_file_down_link'), 30)
-//WebUI.executeJavaScript('arguments[0].click()', Arrays.asList(element))
 
 File folder = new File("C:\\Users\\raja.panneerselvam\\Downloads")
-
 List name_of_files = Arrays.asList(folder.list())
 println(name_of_files)
 if(name_of_files.contains("file_example_CSV_5000.csv")) {
