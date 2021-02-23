@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebElementEntity>
+   <description></description>
+   <name>select_Please Select A StateIslas BalearesJ_0bbe97</name>
+   <tag></tag>
+   <elementGuidId>f229ef02-7747-4b09-bb6b-63ba0714ca6d</elementGuidId>
+   <selectorCollection>
+      <entry>
+         <key>XPATH</key>
+         <value>//select[@name='UserRegionId']</value>
+      </entry>
+      <entry>
+         <key>CSS</key>
+         <value>select[name=&quot;UserRegionId&quot;]</value>
+      </entry>
+   </selectorCollection>
+   <selectorMethod>XPATH</selectorMethod>
+   <useRalativeImagePath>true</useRalativeImagePath>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>tag</name>
+      <type>Main</type>
+      <value>select</value>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>tabindex</name>
+      <type>Main</type>
+      <value>7</value>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>name</name>
+      <type>Main</type>
+      <value>UserRegionId</value>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>class</name>
+      <type>Main</type>
+      <value>valid-border</value>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>text</name>
+      <type>Main</type>
+      <value>Please Select A StateIslas BalearesJaénLeónLéridaLugoMadridMálagaMurciaNavarraOrense/OurensePalenciaLas PalmasPontevedraLa RiojaSalamancaSegoviaSevillaSoriaTarragonaSanta Cruz de TenerifeTeruelToledoValenciaValladolidVizcayaZamoraZaragoza</value>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath</name>
+      <type>Main</type>
+      <value>/html[1]/body[1]/div[10]/div[@class=&quot;Modal edit_profile is-open false&quot;]/div[@class=&quot;Modal-dialog Modal-dialog--small&quot;]/div[@class=&quot;Modal-content&quot;]/div[@class=&quot;Modal__body site-style-v2&quot;]/div[@class=&quot;edit_profile_wrapper&quot;]/div[@class=&quot;edit_profile_form&quot;]/div[@class=&quot;edit_profile_slides&quot;]/form[@class=&quot;site-style-v2 formv3&quot;]/div[@class=&quot;dropdown-inputv3&quot;]/select[@class=&quot;valid-border&quot;]</value>
+   </webElementProperties>
+   <webElementXpaths>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:attributes</name>
+      <type>Main</type>
+      <value>//select[@name='UserRegionId']</value>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:neighbor</name>
+      <type>Main</type>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='Required'])[2]/following::select[1]</value>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:neighbor</name>
+      <type>Main</type>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='Required'])[3]/preceding::select[1]</value>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:position</name>
+      <type>Main</type>
+      <value>//div[4]/select</value>
+   </webElementXpaths>
+</WebElementEntity>
