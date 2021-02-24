@@ -20,33 +20,17 @@ import org.openqa.selenium.Keys as Keys
 import com.kms.katalon.core.webui.common.*;
 import org.openqa.selenium.WebElement;
 
-WebUI.openBrowser('')
-
 WebUI.navigateToUrl('https://aspireautomationp.benefithub.info/')
 
-WebUI.maximizeWindow()
-
-/*
-WebUI.click(findTestObject('Login_UserInfoEdit_Logout/Page_BenefitHub/button_Guest'))
-
-WebUI.click(findTestObject('Login_UserInfoEdit_Logout/Page_BenefitHub/a_Login'))
-
-WebUI.setText(findTestObject('Login_UserInfoEdit_Logout/Page_BenefitHub/input_Login_Username'), 'BHadmin1@BenefitHub.com')
-
-WebUI.setEncryptedText(findTestObject('Login_UserInfoEdit_Logout/Page_BenefitHub/input_Required_Password'), '1gLi+6BLCLgxTfN7dyJwjg==')
-
-WebUI.click(findTestObject('Login_UserInfoEdit_Logout/Page_BenefitHub/button_Submit'))
-
+CustomKeywords.'genericMethods.generic_methods.loginToApplication'()
 
 WebUI.waitForElementVisible(findTestObject('Login_UserInfoEdit_Logout/Page_BenefitHub/display_name', ['display_name' : 'Aspire QATEST']), 60)
 
-*/
 WebUI.scrollToElement(findTestObject('Deal_Edits/Page_BenefitHub/see_all_link_of_specific_container', ['container_name' : 'Discounts & Rewards']), 30)
 
 WebUI.click(findTestObject('Deal_Edits/Page_BenefitHub/see_all_link_of_specific_container', ['container_name' : 'Discounts & Rewards']))
 
 WebUI.click(findTestObject('Object Repository/Deal_Edits/Page_BenefitHub/shop_by_category_dropdown'))
-
 
 //WebUI.click(findTestObject('Deal_Edits/Page_BenefitHub/shop_by_category_submenu_selection', ['selection' : 'Travel']))
 

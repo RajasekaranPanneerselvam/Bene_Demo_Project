@@ -27,6 +27,16 @@
    <GlobalVariableEntity>
       <description></description>
       <initValue>60</initValue>
-      <name>angular_wait</name>
+      <name>wait_for_element</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>'ie'</initValue>
+      <name>browser</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>'C:\\Users\\raja.panneerselvam\\Downloads'</initValue>
+      <name>download_file_path</name>
    </GlobalVariableEntity>
 </GlobalVariableEntities>

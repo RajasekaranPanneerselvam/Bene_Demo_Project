@@ -21,7 +21,7 @@
       <guid>06b1de0c-3a8e-4a91-a9d0-6eaff0d6bc6d</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
-      <testCaseId>Test Cases/Login_ProfileEdit_Logout</testCaseId>
+      <testCaseId>Test Cases/login_into_application</testCaseId>
       <variableLink>
          <testDataLinkId></testDataLinkId>
          <type>DEFAULT</type>
@@ -33,6 +33,24 @@
          <type>DEFAULT</type>
          <value></value>
          <variableId>4f331720-80ab-4372-ad32-2a710536a5fe</variableId>
+      </variableLink>
+      <variableLink>
+         <testDataLinkId></testDataLinkId>
+         <type>DEFAULT</type>
+         <value></value>
+         <variableId>158a2096-44da-42f1-9dec-1cdf34859a9d</variableId>
+      </variableLink>
+      <variableLink>
+         <testDataLinkId></testDataLinkId>
+         <type>DEFAULT</type>
+         <value></value>
+         <variableId>e6317180-4b7a-4334-b58d-e4ddd301fa14</variableId>
+      </variableLink>
+      <variableLink>
+         <testDataLinkId></testDataLinkId>
+         <type>DEFAULT</type>
+         <value></value>
+         <variableId>2703f86c-eea9-488a-a1b5-df036ef8fd54</variableId>
       </variableLink>
    </testCaseLink>
 </TestSuiteEntity>

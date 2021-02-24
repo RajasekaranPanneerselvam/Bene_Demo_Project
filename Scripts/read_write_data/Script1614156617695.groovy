@@ -16,21 +16,15 @@ import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
 import org.openqa.selenium.Keys as Keys
-import org.openqa.selenium.WebElement as WebElement
 
-WebUI.openBrowser('')
+//Create an array with the data in the same order in which you expect to be filled in excel file
+String[] valueToWrite = [id, name,pass];
+		
+//Call read file method of the class to read data
+CustomKeywords.'genericMethods.generic_methods.readExcel'(System.getProperty("user.dir")+"\\Imp Files","ExportExcel.xlsx","Sheet1");
 
-WebUI.navigateToUrl('https://aspireautomationp.benefithub.info/')
+//Write the file using file name, sheet name and the data to be filled
+CustomKeywords.'genericMethods.generic_methods.writeExcel'(System.getProperty("user.dir")+"\\Imp Files","ExportExcel.xlsx","Sheet1",valueToWrite);
 
-WebUI.maximizeWindow()
 
-WebUI.click(findTestObject('Login_UserInfoEdit_Logout/Page_BenefitHub/button_Guest'))
-
-WebUI.click(findTestObject('Login_UserInfoEdit_Logout/Page_BenefitHub/a_Login'))
-
-WebUI.setText(findTestObject('Login_UserInfoEdit_Logout/Page_BenefitHub/input_Login_Username'), username)
-
-WebUI.setEncryptedText(findTestObject('Login_UserInfoEdit_Logout/Page_BenefitHub/input_Required_Password'), Password)
-
-WebUI.click(findTestObject('Login_UserInfoEdit_Logout/Page_BenefitHub/button_Submit'))
-
+CustomKeywords.'genericMethods.generic_methods.readExcel'(System.getProperty("user.dir")+"\\Imp Files","ExportExcel.xlsx","Sheet1");

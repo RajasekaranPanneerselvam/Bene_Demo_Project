@@ -15,7 +15,8 @@ import com.kms.katalon.core.webservice.keyword.WSBuiltInKeywords as WS
 import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
-import org.openqa.selenium.Keys as Keys
+import org.openqa.selenium.Keys
+import org.testng.Assert
 
 WebUI.openBrowser('')
 
@@ -23,11 +24,13 @@ WebUI.navigateToUrl('https://aspireautomationp.benefithub.info/')
 
 WebUI.maximizeWindow()
 
-WebUI.waitForElementVisible(findTestObject('Login_UserInfoEdit_Logout/Page_BenefitHub/button_Guest'), 50)
+CustomKeywords.'genericMethods.generic_methods.wait_until_element_visible'(findTestObject('Login_UserInfoEdit_Logout/Page_BenefitHub/button_Guest'))
 
-WebUI.waitForElementVisible(findTestObject('Images/Homepage_Logo'), 50)
+CustomKeywords.'genericMethods.generic_methods.wait_until_element_visible'(findTestObject('Images/Homepage_Logo'))
 
-CustomKeywords.'screenshotUtility.image_functions.takeWebElementScreenshot'(findTestObject('Images/Homepage_Logo'))
+CustomKeywords.'genericMethods.generic_methods.takeWebElementScreenshot'(findTestObject('Images/Homepage_Logo'))
 
-println(CustomKeywords.'screenshotUtility.image_functions.compareImages'(findTestObject('Images/Homepage_Logo')))
+Assert.assertFalse(CustomKeywords.'genericMethods.generic_methods.compareImages'(findTestObject('Images/Homepage_Logo')))
+
+
 

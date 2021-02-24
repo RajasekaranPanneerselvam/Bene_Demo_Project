@@ -17,22 +17,9 @@ import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
 import org.openqa.selenium.Keys as Keys
 
-WebUI.openBrowser('')
-
 WebUI.navigateToUrl('https://aspireautomationp.benefithub.info/')
 
-WebUI.maximizeWindow()
-
-WebUI.click(findTestObject('Login_UserInfoEdit_Logout/Page_BenefitHub/button_Guest'))
-
-WebUI.click(findTestObject('Login_UserInfoEdit_Logout/Page_BenefitHub/a_Login'))
-
-WebUI.setText(findTestObject('Login_UserInfoEdit_Logout/Page_BenefitHub/input_Login_Username'), 'BHadmin1@BenefitHub.com')
-
-WebUI.setEncryptedText(findTestObject('Login_UserInfoEdit_Logout/Page_BenefitHub/input_Required_Password'), '1gLi+6BLCLgxTfN7dyJwjg==')
-
-WebUI.click(findTestObject('Login_UserInfoEdit_Logout/Page_BenefitHub/button_Submit'))
-
+CustomKeywords.'genericMethods.generic_methods.loginToApplication'()
 
 WebUI.waitForElementVisible(findTestObject('Login_UserInfoEdit_Logout/Page_BenefitHub/display_name', ['display_name' : 'Aspire QATEST']), 60)
 
@@ -46,7 +33,7 @@ WebUI.click(findTestObject('Deal_Edits/Page_BenefitHub/a_Pet Accessories', ['sub
 
 WebUI.click(findTestObject('Deal_Edits/Page_BenefitHub/a_Edit'))
 
-WebUI.scrollToElement(findTestObject('Deal_Edits/Page_BenefitHub/h1_Pets_Pet_Accessories'), 30)
+CustomKeywords.'genericMethods.generic_methods.scroll_to_element'(findTestObject('Deal_Edits/Page_BenefitHub/h1_Pets_Pet_Accessories'))
 
 //WebUI.click(findTestObject('Deal_Edits/Page_BenefitHub/h1_Pets_Pet_Accessories'))
 
@@ -54,12 +41,10 @@ WebUI.click(findTestObject('Deal_Edits/Page_BenefitHub/p_Active offer-11'))
 
 WebUI.click(findTestObject('Deal_Edits/Page_BenefitHub/button_Get Deal'))
 
-WebUI.switchToWindowTitle('Pet Supplies, Accessories and Products Online | PetSmart')
-
+CustomKeywords.'genericMethods.generic_methods.switch_to_window_by_title'('Pet Supplies, Accessories and Products Online | PetSmart')
 WebUI.click(findTestObject('Deal_Edits/Page_Pet Supplies, Accessories and Products_cdc6e2/img'))
 
-WebUI.switchToWindowTitle('BenefitHub')
-
+CustomKeywords.'genericMethods.generic_methods.switch_to_window_by_title'('BenefitHub')
 WebUI.click(findTestObject('Deal_Edits/Page_BenefitHub/button_Feedback'))
 
 WebUI.click(findTestObject('Deal_Edits/Page_BenefitHub/i_Love this offer_far fa-heart'))
@@ -127,7 +112,7 @@ WebUI.click(findTestObject('Deal_Edits/Page_BenefitHub/h3_Active offer-111'))
 
 WebUI.click(findTestObject('Deal_Edits/Page_BenefitHub/x_large_modal'))
 
-WebUI.scrollToElement(findTestObject('Deal_Edits/Page_BenefitHub/a_Save'), 50)
+CustomKeywords.'genericMethods.generic_methods.scrollToElement'(findTestObject('Deal_Edits/Page_BenefitHub/a_Save'))
 
 WebUI.click(findTestObject('Deal_Edits/Page_BenefitHub/a_Save'))
 

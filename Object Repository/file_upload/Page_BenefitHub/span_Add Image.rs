@@ -4,11 +4,9 @@
    <name>span_Add Image</name>
    <tag></tag>
    <elementGuidId>7a0a8fa7-2fc3-43ef-9611-9f8f26c82c9c</elementGuidId>
-   <imagePath></imagePath>
    <selectorCollection>
       <entry>
-         <key>XPATH</key>
-         <value>//div[@id='page-wrapper']/form/header/button/span</value>
+         <key>IMAGE</key>
       </entry>
       <entry>
          <key>BASIC</key>
@@ -19,11 +17,11 @@
          <value>span.textWithFA</value>
       </entry>
       <entry>
-         <key>IMAGE</key>
-         <value></value>
+         <key>XPATH</key>
+         <value>//div[@id='page-wrapper']/form/header/button/span</value>
       </entry>
    </selectorCollection>
-   <selectorMethod>BASIC</selectorMethod>
+   <selectorMethod>XPATH</selectorMethod>
    <useRalativeImagePath>true</useRalativeImagePath>
    <webElementProperties>
       <isSelected>false</isSelected>

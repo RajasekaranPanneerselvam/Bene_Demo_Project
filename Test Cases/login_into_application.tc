@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>login_into_application</name>
+   <tag></tag>
+   <comment></comment>
+   <testCaseGuid>3794516b-b8e9-4ecb-9964-dcf59a4e7f2d</testCaseGuid>
+   <variable>
+      <defaultValue>findTestData('LoginDetails/login_test_data').getValue(2, 1)</defaultValue>
+      <description></description>
+      <id>37f16ebd-4cc3-4a5e-bb3e-8e638ecca79f</id>
+      <masked>false</masked>
+      <name>username</name>
+   </variable>
+   <variable>
+      <defaultValue>findTestData('LoginDetails/login_test_data').getValue(3, 1)</defaultValue>
+      <description></description>
+      <id>4f331720-80ab-4372-ad32-2a710536a5fe</id>
+      <masked>false</masked>
+      <name>Password</name>
+   </variable>
+   <variable>
+      <defaultValue>findTestData('LoginDetails/batchfile').getValue('id', 1)</defaultValue>
+      <description></description>
+      <id>158a2096-44da-42f1-9dec-1cdf34859a9d</id>
+      <masked>false</masked>
+      <name>id</name>
+   </variable>
+   <variable>
+      <defaultValue>findTestData('LoginDetails/batchfile').getValue('username', 1)</defaultValue>
+      <description></description>
+      <id>e6317180-4b7a-4334-b58d-e4ddd301fa14</id>
+      <masked>false</masked>
+      <name>name</name>
+   </variable>
+   <variable>
+      <defaultValue>findTestData('LoginDetails/batchfile').getValue('password', 1)</defaultValue>
+      <description></description>
+      <id>2703f86c-eea9-488a-a1b5-df036ef8fd54</id>
+      <masked>false</masked>
+      <name>pass</name>
+   </variable>
+</TestCaseEntity>

@@ -21,76 +21,30 @@ import com.kms.katalon.core.webui.common.*
 import org.openqa.selenium.*
 import org.openqa.selenium.interactions.Actions as Actions
 
-WebUI.openBrowser('')
+CustomKeywords.'genericMethods.generic_methods.navigate_to_url'(GlobalVariable.G_url)
 
-WebUI.maximizeWindow()
+CustomKeywords.'genericMethods.generic_methods.loginToApplication'()
 
-
-
-WebUI.navigateToUrl(GlobalVariable.G_url)
-
-WebUI.click(findTestObject('Object Repository/file_upload/Page_BenefitHub/button_Guest'))
-
-WebUI.click(findTestObject('Object Repository/file_upload/Page_BenefitHub/a_Login'))
-
-WebUI.setText(findTestObject('Object Repository/file_upload/Page_BenefitHub/input_Login_Username'), 'BHadmin1@BenefitHub.com')
-
-WebUI.setEncryptedText(findTestObject('Object Repository/file_upload/Page_BenefitHub/input_Required_Password'), '1gLi+6BLCLgxTfN7dyJwjg==')
-
-WebUI.click(findTestObject('file_upload/Page_BenefitHub/button_Submit'))
-
-WebElement element = WebUiCommonHelper.findWebElement(findTestObject('Object Repository/file_upload/Page_BenefitHub/i_tag_edit_locator'), 
-    30)
-
-WebUI.executeJavaScript('arguments[0].click()', Arrays.asList(element))
-
+CustomKeywords.'genericMethods.generic_methods.click_hidden_element'(findTestObject('Object Repository/file_upload/Page_BenefitHub/i_tag_edit_locator'))
 WebDriver driver = DriverFactory.getWebDriver()
 
-WebElement sourceElement = WebUiCommonHelper.findWebElement(findTestObject('file_upload/drag_and_drop_locator', [('object') : 'Purchase Program']), 
-    30)
+CustomKeywords.'genericMethods.generic_methods.dragAndDropToElement'(driver, findTestObject('file_upload/drag_and_drop_locator', [('object') : 'Purchase Program']), findTestObject('file_upload/drag_and_drop_locator', [('object') : 'Smart Enroll']))
+CustomKeywords.'genericMethods.generic_methods.click_element'(findTestObject('file_upload/Page_BenefitHub/button_Save'))
+CustomKeywords.'genericMethods.generic_methods.click_element'(findTestObject('file_upload/Page_BenefitHub/a_Edit'))
 
-WebElement destElement = WebUiCommonHelper.findWebElement(findTestObject('file_upload/drag_and_drop_locator', [('object') : 'Smart Enroll']), 
-    30)
+CustomKeywords.'genericMethods.generic_methods.click_element'(findTestObject('file_upload/Page_BenefitHub/span_Add Image'))
 
-java_script = (((((((('var src=arguments[0],tgt=arguments[1];var dataTransfer={dropEffe' + 'ct:\'\',effectAllowed:\'all\',files:[],items:{},types:[],setData:fun') + 
-'ction(format,data){this.items[format]=data;this.types.append(for') + 'mat);},getData:function(format){return this.items[format];},clea') + 
-'rData:function(format){}};var emit=function(event,target){var ev') + 't=document.createEvent(\'Event\');evt.initEvent(event,true,false);') + 
-'evt.dataTransfer=dataTransfer;target.dispatchEvent(evt);};emit(\'') + 'dragstart\',src);emit(\'dragenter\',tgt);emit(\'dragover\',tgt);emit(') + 
-'\'drop\',tgt);emit(\'dragend\',src);')
+CustomKeywords.'genericMethods.generic_methods.switch_To_Frame'(findTestObject('file_upload/frame_locator'))
 
-    ((driver) as JavascriptExecutor).executeScript(java_script, sourceElement, destElement)
+CustomKeywords.'genericMethods.generic_methods.wait_until_element_visible'(findTestObject('file_upload/h1_header', [('title') : 'Content Library']))
 
-WebUI.click(findTestObject('file_upload/Page_BenefitHub/button_Save'))
+CustomKeywords.'genericMethods.generic_methods.click_element'(findTestObject('file_upload/file_upload_button'))
 
-/*
-Actions builder = new Actions(driver)
-builder.clickAndHold(sourceElement).perform()
-builder.moveToElement(destElement).perform()
-WebUI.delay(3)
-builder.release(destElement).perform()
-*/
-WebUI.click(findTestObject('file_upload/Page_BenefitHub/a_Edit'))
+CustomKeywords.'genericMethods.generic_methods.wait_until_element_visible'(findTestObject('file_upload/h1_header', [('title') : 'Upload to Content Library']))
 
-WebUI.click(findTestObject('file_upload/Page_BenefitHub/span_Add Image'))
-
-WebUI.switchToFrame(findTestObject('file_upload/frame_locator'), 50, FailureHandling.STOP_ON_FAILURE)
-
-WebUI.waitForElementVisible(findTestObject('file_upload/h1_header', [('title') : 'Content Library']), 50)
-
-WebUI.click(findTestObject('file_upload/file_upload_button'))
-
-WebUI.waitForElementVisible(findTestObject('file_upload/h1_header', [('title') : 'Upload to Content Library']), 50)
-
-WebUI.uploadFileWithDragAndDrop(findTestObject('file_upload/Page_BenefitHub/content Library_dropzone'), 'C:\\Users\\raja.panneerselvam\\Documents\\polo1.png')
-
-println('uploaded successfully')
+CustomKeywords.'genericMethods.generic_methods.upload_file'(findTestObject('file_upload/Page_BenefitHub/content Library_dropzone'), 'C:\\Users\\raja.panneerselvam\\Documents\\saraswathi.png')
 
 WebUI.delay(5)
+CustomKeywords.'genericMethods.generic_methods.wait_until_element_visible'(findTestObject('file_upload/h1_header', [('title') : 'Content Library']))
 
-WebUI.waitForElementVisible(findTestObject('file_upload/h1_header', [('title') : 'Content Library']), 50)
-
-WebUI.waitForElementPresent(findTestObject('file_upload/Page_BenefitHub/search_file_locator/search_file', [('file_name') : 'polo1.png']), 
-    50)
-
-WebUI.switchToDefaultContent()
-
+CustomKeywords.'genericMethods.generic_methods.wait_until_element_visible'(findTestObject('file_upload/Page_BenefitHub/search_file_locator/search_file', [('file_name') : 'saraswathi.png']))

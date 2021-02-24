@@ -9,19 +9,19 @@
          <key>IMAGE</key>
       </entry>
       <entry>
+         <key>BASIC</key>
+         <value>//div[@id='home-page-edit']//a[text()='Edit']</value>
+      </entry>
+      <entry>
          <key>CSS</key>
          <value>#home-page-edit > a</value>
       </entry>
       <entry>
          <key>XPATH</key>
-         <value>//div[@id='home-page-edit']/a</value>
-      </entry>
-      <entry>
-         <key>BASIC</key>
-         <value>//div[@id='home-page-edit']//a[text()='Edit']</value>
+         <value>(//a[contains(text(),'Edit')])[2]</value>
       </entry>
    </selectorCollection>
-   <selectorMethod>BASIC</selectorMethod>
+   <selectorMethod>XPATH</selectorMethod>
    <useRalativeImagePath>true</useRalativeImagePath>
    <webElementProperties>
       <isSelected>false</isSelected>
