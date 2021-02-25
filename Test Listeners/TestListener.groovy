@@ -62,7 +62,7 @@ class TestListener {
 				
 				prefs.put("profile.default_content_settings.popups", 0)
 				prefs.put("download.prompt_for_download", "false")
-				prefs.put("download.default_directory", "C:\\Users\\raja.panneerselvam\\Downloads")
+				prefs.put("download.default_directory", System.getProperty("user.dir") + "/Imp Files")
 				
 				options.setExperimentalOption("prefs", prefs);
 				
@@ -99,7 +99,7 @@ class TestListener {
 			{
 				
 				System.setProperty("webdriver.gecko.driver", "C:\\Users\\raja.panneerselvam\\Desktop\\Katalon_Studio_Windows_64-7.9.1\\configuration\\resources\\drivers\\firefox_win64\\geckodriver.exe");
-				String downloadFilepath = "C:\\Users\\raja.panneerselvam\\Downloads";
+				String downloadFilepath = System.getProperty("user.dir") + "/Imp Files";
 				FirefoxProfile profile= new FirefoxProfile();
 				profile.setAcceptUntrustedCertificates(true);
 				profile.setAssumeUntrustedCertificateIssuer(true);

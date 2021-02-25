@@ -36,16 +36,6 @@
    </GlobalVariableEntity>
    <GlobalVariableEntity>
       <description></description>
-      <initValue>'C:\\Users\\raja.panneerselvam\\Katalon Studio\\My First Mobile Project\\Imp Files'</initValue>
-      <name>download_file_path</name>
-   </GlobalVariableEntity>
-   <GlobalVariableEntity>
-      <description></description>
-      <initValue>'C:\\Users\\raja.panneerselvam\\Katalon Studio\\My First Mobile Project\\Imp Files\\text_file.txt'</initValue>
-      <name>text_file_path</name>
-   </GlobalVariableEntity>
-   <GlobalVariableEntity>
-      <description></description>
       <initValue>'|'</initValue>
       <name>text_file_delimiter</name>
    </GlobalVariableEntity>

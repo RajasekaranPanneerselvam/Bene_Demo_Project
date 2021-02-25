@@ -59,8 +59,13 @@ import java.util.Iterator;
 
 public class generic_methods {
 
-	//------------Yet to find solid solution for Internet Explorer Download prompt (OS Level popup) -----------
+	//------------Yet to find solid solution for Internet Explorer Download prompt (OS Level popup) ----------- //
 		
+	//------------Please update path to driver (\\Katalon_Studio_Windows_64-7.9.1\\configuration\\resources\\drivers) in TestListener class ------------ //
+	
+	//------------Please update the hard code value (int rowCount = 1;) in writeExcel function ------------- //
+	
+	
 	//This method will fetch record from text file by row/record index
 	@Keyword
 	public String read_record_from_text_file_by_index(int index)
@@ -174,7 +179,7 @@ public class generic_methods {
 	//This method takes screenshot of particular element and store it in the 'Screenshots' directory
 	@Keyword
 	public void takeWebElementScreenshot(TestObject object) {
-		WebElement element = WebUiCommonHelper.findWebElement(object, 30)
+		WebElement element = WebUiCommonHelper.findWebElement(object, GlobalVariable.wait_for_element)
 		WebDriver driver = DriverFactory.getWebDriver();
 		Screenshot screenshot = new AShot().takeScreenshot(driver,element)
 		ImageIO.write(screenshot.getImage(), "PNG", new File(System.getProperty("user.dir") + "/Screenshots/ElementScreenshot.png"))
@@ -183,7 +188,7 @@ public class generic_methods {
 	//This method will compare and return true if it finds difference between the actual and expected images
 	@Keyword
 	public boolean compareImages(TestObject object) {
-		WebElement element = WebUiCommonHelper.findWebElement(object, 30)
+		WebElement element = WebUiCommonHelper.findWebElement(object, GlobalVariable.wait_for_element)
 		WebDriver driver = DriverFactory.getWebDriver();
 
 		BufferedImage expectedImage = ImageIO.read(new File(System.getProperty("user.dir") + "\\Screenshots\\ElementScreenshot.png"));
@@ -216,8 +221,8 @@ public class generic_methods {
 	public void dragAndDropToElement(WebDriver driver, TestObject source, TestObject destination)
 	{
 
-		WebElement sourceElement = WebUiCommonHelper.findWebElement(source,30);
-		WebElement destElement = WebUiCommonHelper.findWebElement(destination, 30);
+		WebElement sourceElement = WebUiCommonHelper.findWebElement(source,GlobalVariable.wait_for_element);
+		WebElement destElement = WebUiCommonHelper.findWebElement(destination, GlobalVariable.wait_for_element);
 
 		((driver) as JavascriptExecutor).executeScript((((((((('var src=arguments[0],tgt=arguments[1];var dataTransfer={dropEffe' + 'ct:\'\',effectAllowed:\'all\',files:[],items:{},types:[],setData:fun') +
 				'ction(format,data){this.items[format]=data;this.types.append(for') + 'mat);},getData:function(format){return this.items[format];},clea') +
@@ -231,7 +236,7 @@ public class generic_methods {
 	@Keyword
 	public void click_hidden_element(TestObject object)
 	{
-		WebElement element = WebUiCommonHelper.findWebElement(object, 50)
+		WebElement element = WebUiCommonHelper.findWebElement(object, GlobalVariable.wait_for_element)
 		WebUI.executeJavaScript('arguments[0].click()', Arrays.asList(element))
 	}
 
@@ -239,7 +244,7 @@ public class generic_methods {
 	@Keyword
 	public void scroll_to_element(TestObject object)
 	{
-		WebUI.scrollToElement(object, 50, FailureHandling.STOP_ON_FAILURE)
+		WebUI.scrollToElement(object, GlobalVariable.wait_for_element, FailureHandling.STOP_ON_FAILURE)
 	}
 
 	//This method is used to click on the specified element
@@ -253,7 +258,7 @@ public class generic_methods {
 	@Keyword
 	public void switch_To_Frame(TestObject object)
 	{
-		WebUI.switchToFrame(object, 50, FailureHandling.STOP_ON_FAILURE)
+		WebUI.switchToFrame(object, GlobalVariable.wait_for_element, FailureHandling.STOP_ON_FAILURE)
 	}
 
 	//This method is used to upload files from OS level browsing pop up
@@ -267,14 +272,14 @@ public class generic_methods {
 	@Keyword
 	public void wait_until_element_visible(TestObject object)
 	{
-		WebUI.waitForElementVisible(object, 50, FailureHandling.STOP_ON_FAILURE)
+		WebUI.waitForElementVisible(object, GlobalVariable.wait_for_element, FailureHandling.STOP_ONGlobalVariable.wait_for_elementILURE)
 	}
 
 	//This method is used to wait for a particular element to be present for the specified maximum wait time
 	@Keyword
 	public void wait_until_element_present(TestObject object)
 	{
-		WebUI.waitForElementPresent(object, 50, FailureHandling.STOP_ON_FAILURE)
+		WebUI.waitForElementPresent(object, GlobalVariable.wait_for_element, FailureHandling.STOP_ON_FAILURE)
 	}
 
 	//This method is used to switch to a window with respect to the index of all the opened windows
@@ -362,7 +367,7 @@ public class generic_methods {
 			}
 			Sheet Sheet = Workbook.getSheetAt(0);
 			int rowCount = Sheet.getLastRowNum()-Sheet.getFirstRowNum();
-			for (int i = 0; i < rowCount+1; i++) { //i < rowCount+1
+			for (int i = 0; i < rowCount+1; i++) {
 				Row row = Sheet.getRow(i);
 				int noOfCells = row.getLastCellNum();
 				for (int j = 0; j <  noOfCells; j++) {

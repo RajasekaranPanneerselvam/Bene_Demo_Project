@@ -27,8 +27,7 @@ import java.util.*;
 WebUI.navigateToUrl("https://file-examples.com/index.php/text-files-and-archives-download/")
 WebUI.scrollToElement(findTestObject('Object Repository/file_upload/search_box_object'), 30)
 WebUI.click(findTestObject('Object Repository/file_upload/csv_file_down_link'))
-
+//On clicking the above link Automatically files gets downloaded in the 'Imp Files' project folder
 WebUI.delay(5)
-default_download_path = GlobalVariable.download_file_path
 
-CustomKeywords.'genericMethods.generic_methods.verifyFileDownload'(default_download_path)
+CustomKeywords.'genericMethods.generic_methods.verifyFileDownload'(System.getProperty("user.dir") + "/Imp Files")
