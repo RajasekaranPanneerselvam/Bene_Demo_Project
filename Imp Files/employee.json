@@ -1,0 +1,32 @@
+{
+  "data": [{
+    "id_array": [
+      1,
+      2,
+      3
+    ],
+    "is_emp": true,
+    "name": "Rajasekran",
+    "number": 12,
+    "address": {
+      "area": "siruseri",
+      "city": "chennai"
+    },
+    "office": "Aspire Systems"
+  },
+  {
+    "id_array": [
+      4,
+      5,
+      6
+    ],
+    "is_emp": true,
+    "name": "Saraswathi",
+    "number": 12,
+    "address": {
+      "area": "Tnagar",
+      "city": "chennai"
+    },
+    "office": "Aspire Systems"
+  }]
+}

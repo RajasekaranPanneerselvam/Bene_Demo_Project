@@ -45,15 +45,130 @@ import ru.yandex.qatools.ashot.AShot
 import ru.yandex.qatools.ashot.Screenshot
 
 import internal.GlobalVariable
+import java.io.FileNotFoundException;
+import java.io.FileReader;
+import java.io.IOException;
+
+import org.json.JSONArray;
+import org.json.JSONObject;
+import org.json.simple.parser.JSONParser;
+import org.json.simple.parser.ParseException;
+
+import java.util.Iterator;
+
 
 public class generic_methods {
 
+	//------------Yet to find solid solution for Internet Explorer Download prompt (OS Level popup) -----------
+		
+	//This method will fetch record from text file by row/record index
+	@Keyword
+	public String read_record_from_text_file_by_index(int index)
+	{
+		File f=new File(System.getProperty("user.dir") + "/Imp Files/text_file.txt");
+		Scanner sc= new Scanner(f);
+		
+		int i=0;
+		while(sc.hasNext())
+		{
+			if (i == index)
+				return sc.nextLine();
+				
+			else
+				sc.nextLine();
+			i++;
+		}
+		return null;
+	}	
+	
+	//This method will return record which matches the given (column) unique id  in a record
+	@Keyword
+	public String[] read_record_by_unique_key(char symbol, String key)
+	{
+		File f=new File(System.getProperty("user.dir") + "/Imp Files/text_file.txt");
+		Scanner sc= new Scanner(f);
+		
+		String str;
+		String[] res
+		while(sc.hasNext())
+		{
+			
+			str = sc.nextLine()
+			res = str.split("["+symbol+"]", 0);
+			for(String myStr: res) {
+			   if(myStr==key)
+				 return res;
+			}
+					
+		}
+		return null;
+	}
+	
+	//This method will return value for a given Key from JSON file
+	@Keyword
+	public void getJsonValue(String jsonPath, String key) {
+		String result_value = "";	
+		FileReader reader = new FileReader(jsonPath)
+		JSONParser jsonParser = new JSONParser();
+		Object obj = jsonParser.parse(reader);
+		JSONObject jsonObj = new JSONObject(obj);
+		getKey(jsonObj, key)
+	}
 
+	public static void parseObject(JSONObject json, String key) {
+		System.out.println(json.get(key));
+	}
+
+	public static void getKey(JSONObject json, String key) {
+
+		
+		boolean exists = json.has(key);
+		
+		Iterator<?> keys;
+		String nextKeys;
+		if (!exists) {
+			keys = json.keys();
+			while (keys.hasNext()) {
+				nextKeys = (String) keys.next();
+				try {
+
+					if (json.get(nextKeys) instanceof JSONObject) {
+
+						if (exists == false) {
+							getKey(json.getJSONObject(nextKeys), key);
+						}
+
+					} else if (json.get(nextKeys) instanceof JSONArray) {
+						JSONArray jsonarray = json.getJSONArray(nextKeys);
+						for (int i = 0; i < jsonarray.length(); i++) {
+							String jsonarrayString = jsonarray.get(i).toString();
+							JSONObject innerJSOn = new JSONObject(jsonarrayString);
+
+							if (exists == false) {
+								getKey(innerJSOn, key);
+							}
+
+						}
+
+					}
+
+				} catch (Exception e) {
+				}
+
+			}
+
+		} else {
+			 parseObject(json, key);
+		}
+
+		
+	}
+	
 	//User will be navigated to the specified URL in browser
 	@Keyword
-	public void navigate_to_url(String url)
+	public void navigate_to_url(String Url)
 	{
-		WebUI.navigateToUrl(GlobalVariable.G_url)
+		WebUI.navigateToUrl(Url)
 	}
 
 	//This method takes screenshot of particular element and store it in the 'Screenshots' directory
@@ -141,17 +256,6 @@ public class generic_methods {
 		WebUI.switchToFrame(object, 50, FailureHandling.STOP_ON_FAILURE)
 	}
 
-	//This method will be used for login into BenefitHub application
-	@Keyword
-	public void loginToApplication() {
-		wait_until_element_visible(findTestObject('Object Repository/file_upload/Page_BenefitHub/button_Guest'));
-		click_element(findTestObject('Login_UserInfoEdit_Logout/Page_BenefitHub/button_Guest'))
-		click_element(findTestObject('Login_UserInfoEdit_Logout/Page_BenefitHub/a_Login'))
-		setTextbox(findTestObject('Object Repository/file_upload/Page_BenefitHub/input_Login_Username'), GlobalVariable.admin_username)
-		setPassword(findTestObject('Object Repository/file_upload/Page_BenefitHub/input_Required_Password'), GlobalVariable.admin_password)
-		click_element(findTestObject('file_upload/Page_BenefitHub/button_Submit'))
-	}
-
 	//This method is used to upload files from OS level browsing pop up
 	@Keyword
 	public void upload_file(TestObject object, String location)
@@ -189,11 +293,11 @@ public class generic_methods {
 
 	//This method is used to switch to a window with respect to the given page URL
 	@Keyword
-	public void switch_To_Window_Ttl(String url)
+	public void switch_To_Window_Url(String url)
 	{
 		WebUI.switchToWindowUrl(url, FailureHandling.STOP_ON_FAILURE)
 	}
-	
+
 	//This method will verify if the file gets downloaded in the specified location
 	@Keyword
 	public void verifyFileDownload(String filePath) {

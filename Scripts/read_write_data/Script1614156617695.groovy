@@ -1,4 +1,6 @@
 import static com.kms.katalon.core.checkpoint.CheckpointFactory.findCheckpoint
+import java.util.List;
+import java.util.Scanner;
 import static com.kms.katalon.core.testcase.TestCaseFactory.findTestCase
 import static com.kms.katalon.core.testdata.TestDataFactory.findTestData
 import static com.kms.katalon.core.testobject.ObjectRepository.findTestObject
@@ -17,14 +19,29 @@ import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
 import org.openqa.selenium.Keys as Keys
 
-//Create an array with the data in the same order in which you expect to be filled in excel file
-String[] valueToWrite = [id, name,pass];
-		
-//Call read file method of the class to read data
+
 CustomKeywords.'genericMethods.generic_methods.readExcel'(System.getProperty("user.dir")+"\\Imp Files","ExportExcel.xlsx","Sheet1");
 
-//Write the file using file name, sheet name and the data to be filled
+String key = GlobalVariable.text_file_fetch_key;
+String[] result = CustomKeywords.'genericMethods.generic_methods.read_record_by_unique_key'((char)GlobalVariable.text_file_delimiter, key);
+println(result)
+
+CustomKeywords.'genericMethods.generic_methods.getJsonValue'(System.getProperty("user.dir") + "\\Imp Files\\employee.json", "address");
+CustomKeywords.'genericMethods.generic_methods.writeExcel'(System.getProperty("user.dir")+"\\Imp Files","ExportExcel.xlsx","Sheet1",result);
+CustomKeywords.'genericMethods.generic_methods.readExcel'(System.getProperty("user.dir")+"\\Imp Files","ExportExcel.xlsx","Sheet1");
+
+
+String[] valueToWrite = [id,name,pass];
+CustomKeywords.'genericMethods.generic_methods.readExcel'(System.getProperty("user.dir")+"\\Imp Files","ExportExcel.xlsx","Sheet1");
 CustomKeywords.'genericMethods.generic_methods.writeExcel'(System.getProperty("user.dir")+"\\Imp Files","ExportExcel.xlsx","Sheet1",valueToWrite);
-
-
 CustomKeywords.'genericMethods.generic_methods.readExcel'(System.getProperty("user.dir")+"\\Imp Files","ExportExcel.xlsx","Sheet1");
+
+String recordHeader = CustomKeywords.'genericMethods.generic_methods.read_record_from_text_file_by_index'(0);
+println(recordHeader)
+
+String record2 = CustomKeywords.'genericMethods.generic_methods.read_record_from_text_file_by_index'(2);
+println(record2)
+
+
+
+

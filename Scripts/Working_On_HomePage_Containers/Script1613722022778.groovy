@@ -20,9 +20,8 @@ import org.openqa.selenium.Keys as Keys
 import com.kms.katalon.core.webui.common.*;
 import org.openqa.selenium.WebElement;
 
-WebUI.navigateToUrl('https://aspireautomationp.benefithub.info/')
-
-CustomKeywords.'genericMethods.generic_methods.loginToApplication'()
+CustomKeywords.'genericMethods.generic_methods.navigate_to_url'(GlobalVariable.G_url);
+CustomKeywords.'helper_methods.helper_methods.loginToApplication'();
 
 WebUI.waitForElementVisible(findTestObject('Login_UserInfoEdit_Logout/Page_BenefitHub/display_name', ['display_name' : 'Aspire QATEST']), 60)
 

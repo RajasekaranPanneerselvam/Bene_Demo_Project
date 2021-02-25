@@ -23,7 +23,7 @@ import org.openqa.selenium.interactions.Actions as Actions
 
 CustomKeywords.'genericMethods.generic_methods.navigate_to_url'(GlobalVariable.G_url)
 
-CustomKeywords.'genericMethods.generic_methods.loginToApplication'()
+CustomKeywords.'helper_methods.helper_methods.loginToApplication'();
 
 CustomKeywords.'genericMethods.generic_methods.click_hidden_element'(findTestObject('Object Repository/file_upload/Page_BenefitHub/i_tag_edit_locator'))
 WebDriver driver = DriverFactory.getWebDriver()

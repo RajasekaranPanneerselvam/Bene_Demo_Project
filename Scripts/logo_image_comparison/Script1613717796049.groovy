@@ -18,11 +18,8 @@ import internal.GlobalVariable as GlobalVariable
 import org.openqa.selenium.Keys
 import org.testng.Assert
 
-WebUI.openBrowser('')
-
-WebUI.navigateToUrl('https://aspireautomationp.benefithub.info/')
-
-WebUI.maximizeWindow()
+CustomKeywords.'genericMethods.generic_methods.navigate_to_url'(GlobalVariable.G_url);
+CustomKeywords.'helper_methods.helper_methods.loginToApplication'();
 
 CustomKeywords.'genericMethods.generic_methods.wait_until_element_visible'(findTestObject('Login_UserInfoEdit_Logout/Page_BenefitHub/button_Guest'))
 

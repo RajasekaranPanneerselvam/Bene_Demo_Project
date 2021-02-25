@@ -21,5 +21,5 @@ import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.remote.CapabilityType;
 
 
-
-CustomKeywords.'genericMethods.generic_methods.loginToApplication'()
+WebUI.navigateToUrl('https://aspireautomationp.benefithub.info/')
+CustomKeywords.'helper_methods.helper_methods.loginToApplication'();

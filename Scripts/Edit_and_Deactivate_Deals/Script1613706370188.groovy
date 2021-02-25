@@ -17,9 +17,9 @@ import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
 import org.openqa.selenium.Keys as Keys
 
-WebUI.navigateToUrl('https://aspireautomationp.benefithub.info/')
+CustomKeywords.'genericMethods.generic_methods.navigate_to_url'(GlobalVariable.G_url);
 
-CustomKeywords.'genericMethods.generic_methods.loginToApplication'()
+CustomKeywords.'helper_methods.helper_methods.loginToApplication'();
 
 WebUI.waitForElementVisible(findTestObject('Login_UserInfoEdit_Logout/Page_BenefitHub/display_name', ['display_name' : 'Aspire QATEST']), 60)
 
