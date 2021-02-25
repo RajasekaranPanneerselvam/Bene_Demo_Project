@@ -6,7 +6,7 @@ import org.openqa.selenium.WebDriver;
 import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 
-//import com.relevantcodes.extentreports.ExtentTest;
+import com.relevantcodes.extentreports.ExtentTest;
 
 import afta.src.test.java.com.TAFrameworkJAVA.support.BaseTest;
 import afta.src.test.java.com.TAFrameworkJAVA.support.DataProviderUtils;
@@ -42,16 +42,16 @@ public class AspireTA_Java_Framework_Demo extends BaseTest {
 		String site = webSite.split("_")[0];
 		String stakeHolderName = webSite.split("_")[1];
 		
-		//ExtentTest extentedReport = Log.testCaseInfo(testData.get("Description") + "[" + browser + " || " + stakeHolderName.toUpperCase() + " ]", "Aspire TA Framework Java " + stakeHolderName.toUpperCase(), "Regression", "Aspire Systems");
+		ExtentTest extentedReport = Log.testCaseInfo(testData.get("Description") + "[" + browser + " || " + stakeHolderName.toUpperCase() + " ]", "Aspire TA Framework Java " + stakeHolderName.toUpperCase(), "Regression", "Aspire Systems");
 
 		try {
 			HomePage homePage = new HomePage(driver, site).get();
-			//Log.messageExtentReport("Step 1. Navigated to '" + stakeHolderName + "' Home Page!", extentedReport);
+			Log.messageExtentReport("Step 1. Navigated to '" + stakeHolderName + "' Home Page!", extentedReport);
 
-//			homePage.searchProduct("text");
-//			Log.messageWithExtentScreenshot("Search result for "+searchKeyword, driver, extentedReport, true);
+		homePage.searchProduct("text");
+			Log.messageWithExtentScreenshot("Search result for "+searchKeyword, driver, extentedReport, true);
 
-			//Log.testCaseResultExtentReport(extentedReport);
+			Log.testCaseResultExtentReport(extentedReport);
 
 		}// try
 		catch (Exception e) {
