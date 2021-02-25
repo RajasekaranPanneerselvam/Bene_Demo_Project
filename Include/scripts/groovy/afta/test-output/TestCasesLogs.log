@@ -1,0 +1,11 @@
+26-May-2017 13:30:24:033 INFO  [PoolService-0]  
+26-May-2017 13:30:24:075 INFO  [PoolService-0] ****             Sample test[Browser&5.1&Android || GOOGLE ]             ***** 
+26-May-2017 13:30:24:075 INFO  [PoolService-0]  
+26-May-2017 13:30:27:970 DEBUG [PoolService-0] Page URL:: https://www.google.com/ 
+26-May-2017 13:30:30:476 DEBUG [PoolService-0] Page URL:: https://www.google.com/ 
+26-May-2017 13:30:31:811 DEBUG [PoolService-0] Element is displayed:: [[RemoteWebDriver: chrome on ANDROID (714c122c69304a5d85f35bc1628cf290)] -> css selector: #lst-ib] 
+26-May-2017 13:30:31:811 INFO  [PoolService-0] Step 1. Navigated to 'google' Home Page! 
+26-May-2017 13:30:32:620 DEBUG [PoolService-0] Element is displayed:: [[RemoteWebDriver: chrome on ANDROID (714c122c69304a5d85f35bc1628cf290)] -> css selector: #lst-ib] 
+26-May-2017 13:30:35:338 DEBUG [PoolService-0] Element is displayed:: [[RemoteWebDriver: chrome on ANDROID (714c122c69304a5d85f35bc1628cf290)] -> css selector: div.sbico] 
+26-May-2017 13:30:44:175 DEBUG [PoolService-0] Page URL:: https://www.google.com/search?site=&source=hp&ei=moanwywqhuhr0glaoymi&q=text&oq=text&gs_l=mobile-gws-hp.12..0l5.9239.9275.0.10936.5.3.0.1.1.0.149.331.1j2.3.0....0...1..64.mobile-gws-hp..2.2.271.0..0i131k1.bo6zz7anjpu 
+26-May-2017 13:39:44:538 INFO  [PoolService-0] ****             -E---N---D-             ***** 

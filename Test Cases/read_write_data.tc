@@ -5,4 +5,25 @@
    <tag></tag>
    <comment></comment>
    <testCaseGuid>72697b36-80a9-4194-a67d-9d6055b05cb2</testCaseGuid>
+   <variable>
+      <defaultValue>findTestData('LoginDetails/batchfile').getValue('id', 1)</defaultValue>
+      <description></description>
+      <id>6407f220-8292-40c1-9ac8-baffac335501</id>
+      <masked>false</masked>
+      <name>id</name>
+   </variable>
+   <variable>
+      <defaultValue>findTestData('LoginDetails/batchfile').getValue('username', 1)</defaultValue>
+      <description></description>
+      <id>9cb09735-1a71-4ddc-9e70-bc0160c8ce14</id>
+      <masked>false</masked>
+      <name>name</name>
+   </variable>
+   <variable>
+      <defaultValue>findTestData('LoginDetails/batchfile').getValue('password', 1)</defaultValue>
+      <description></description>
+      <id>5f16ba89-eb8a-48af-8269-64bf9345b066</id>
+      <masked>false</masked>
+      <name>pass</name>
+   </variable>
 </TestCaseEntity>

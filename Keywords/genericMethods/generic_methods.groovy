@@ -48,182 +48,6 @@ import internal.GlobalVariable
 
 public class generic_methods {
 
-	
-	@Keyword
-	public void verifyFileDownload(String filePath)
-	{		
-		File folder = new File(filePath)
-		List all_files = Arrays.asList(folder.list())
-		if(all_files.contains("file_example_CSV_5000.csv")) {
-			Assert.assertTrue(true, "File is downloaded")
-		}
-		else {
-			Assert.fail("File download is failed")
-		}	
-	}
-	
-	@Keyword
-	public void writeExcel(String filePath,String fileName,String sheetName,String[] dataToWrite) throws IOException{
-
-		//Create an object of File class to open xlsx file
-
-		File file =    new File(filePath+"\\"+fileName);
-
-		//Create an object of FileInputStream class to read excel file
-
-		FileInputStream inputStream = new FileInputStream(file);
-
-		Workbook Workbook = null;
-
-		//Find the file extension by splitting  file name in substring and getting only extension name
-
-		String fileExtensionName = fileName.substring(fileName.indexOf("."));
-
-		//Check condition if the file is xlsx file
-
-		if(fileExtensionName.equals(".xlsx")){
-
-			//If it is xlsx file then create object of XSSFWorkbook class
-
-			Workbook = new XSSFWorkbook(inputStream);
-
-		}
-
-		//Check condition if the file is xls file
-
-		else if(fileExtensionName.equals(".xls")){
-
-			//If it is xls file then create object of XSSFWorkbook class
-
-			Workbook = new HSSFWorkbook(inputStream);
-
-		}
-
-		//Read excel sheet by sheet name
-		Sheet sheet = Workbook.getSheetAt(0);
-
-		//Get the current count of rows in excel file
-
-		println (sheet.getLastRowNum()); // This returns 1048575 (Max limit) But it should return row count for available number of records
-		println (sheet.getFirstRowNum()); // This returns 0
-		//Instead of below hardcoded value we should use "int rowCount = sheet.getLastRowNum() - sheet.getFirstRowNum();"
-		int rowCount = 1;
-		//Get the first row from the sheet
-		Row row = sheet.getRow(1);
-
-		//Create a new row and append it at last of sheet
-
-		Row newRow = sheet.createRow(rowCount+1);
-
-		//Create a loop over the cell of newly created Row
-
-		for(int j = 0; j < row.getLastCellNum(); j++){
-
-			//Fill data in row
-
-			Cell cell = newRow.createCell(j);
-
-			cell.setCellValue(dataToWrite[j]);
-
-		}
-
-		//Close input stream
-
-		inputStream.close();
-
-		//Create an object of FileOutputStream class to create write data in excel file
-
-		FileOutputStream outputStream = new FileOutputStream(file);
-
-		//write data in the excel file
-
-		Workbook.write(outputStream);
-
-		//close output stream
-
-		outputStream.close();
-
-	}
-
-
-	@Keyword
-	public void readExcel(String filePath,String fileName,String sheetName) throws IOException{
-
-		DataFormatter objDefaultFormat = new DataFormatter();
-		FormulaEvaluator objFormulaEvaluator;
-
-		//Create an object of File class to open xlsx file
-		try {
-			File file =    new File(filePath+"\\"+fileName);
-
-			//Create an object of FileInputStream class to read excel file
-
-			FileInputStream inputStream = new FileInputStream(file);
-
-			Workbook Workbook = null;
-
-			//Find the file extension by splitting file name in substring  and getting only extension name
-
-			String fileExtensionName = fileName.substring(fileName.indexOf("."));
-
-			//Check condition if the file is xlsx file
-
-			if(fileExtensionName.equals(".xlsx")){
-
-				//If it is xlsx file then create object of XSSFWorkbook class
-
-				Workbook = new XSSFWorkbook(inputStream);
-
-				objFormulaEvaluator = new XSSFFormulaEvaluator((XSSFWorkbook) Workbook);
-			}
-
-			//Check condition if the file is xls file
-
-			else if(fileExtensionName.equals(".xls")){
-
-				//If it is xls file then create object of HSSFWorkbook class
-
-				Workbook = new HSSFWorkbook(inputStream);
-				objFormulaEvaluator = new HSSFFormulaEvaluator((HSSFWorkbook) Workbook);
-
-			}
-
-			//Read sheet inside the workbook by its name
-
-			Sheet Sheet = Workbook.getSheetAt(0);
-
-			//Find number of rows in excel file
-
-			int rowCount = Sheet.getLastRowNum()-Sheet.getFirstRowNum();
-
-			//Create a loop over all the rows of excel file to read it
-
-			for (int i = 0; i < rowCount+1; i++) { //i < rowCount+1
-
-				Row row = Sheet.getRow(i);
-
-				//Create a loop to print cell values in a row
-				int noOfCells = row.getLastCellNum();
-				for (int j = 0; j <  noOfCells; j++) {
-					Cell cellValue = row.getCell(j);
-					objFormulaEvaluator.evaluate(cellValue); // This will evaluate the cell, And any type of cell will return string value
-					String cellValueStr = objDefaultFormat.formatCellValue(cellValue,objFormulaEvaluator);
-					System.out.print(cellValueStr+"|| ");
-				}
-
-				System.out.println();
-				//Cannot invoke method getLastCellNum() on null object
-			}
-		}
-		catch(NullPointerException e)
-		{
-
-		}
-		finally {
-
-		}
-
-	}
 
 	//User will be navigated to the specified URL in browser
 	@Keyword
@@ -368,6 +192,89 @@ public class generic_methods {
 	public void switch_To_Window_Ttl(String url)
 	{
 		WebUI.switchToWindowUrl(url, FailureHandling.STOP_ON_FAILURE)
+	}
+	
+	//This method will verify if the file gets downloaded in the specified location
+	@Keyword
+	public void verifyFileDownload(String filePath) {
+		File folder = new File(filePath)
+		List all_files = Arrays.asList(folder.list())
+		if(all_files.contains("file_example_CSV_5000.csv")) {
+			Assert.assertTrue(true, "File is downloaded")
+		}
+		else {
+			Assert.fail("File download is failed")
+		}
+	}
+
+	//This method is used to write the specified data into Excel sheet
+	@Keyword
+	public void writeExcel(String filePath,String fileName,String sheetName,String[] dataToWrite) throws IOException{
+		File file =    new File(filePath+"\\"+fileName);
+		FileInputStream inputStream = new FileInputStream(file);
+		Workbook Workbook = null;
+		String fileExtensionName = fileName.substring(fileName.indexOf("."));
+		if(fileExtensionName.equals(".xlsx")){
+			Workbook = new XSSFWorkbook(inputStream);
+		}
+		else if(fileExtensionName.equals(".xls")){
+			Workbook = new HSSFWorkbook(inputStream);
+		}
+		Sheet sheet = Workbook.getSheetAt(0);
+		println (sheet.getLastRowNum()); // This returns 1048575 (Max limit) But it should return row count for available number of records
+		println (sheet.getFirstRowNum()); // This returns 0
+		//Instead of below hardcoded value we should use "int rowCount = sheet.getLastRowNum() - sheet.getFirstRowNum();"
+		int rowCount = 1;
+		//Get the first row from the sheet
+		Row row = sheet.getRow(1);
+		Row newRow = sheet.createRow(rowCount+1);
+		for(int j = 0; j < row.getLastCellNum(); j++){
+			Cell cell = newRow.createCell(j);
+			cell.setCellValue(dataToWrite[j]);
+		}
+		inputStream.close();
+		FileOutputStream outputStream = new FileOutputStream(file);
+		Workbook.write(outputStream);
+		outputStream.close();
+	}
+
+	//This method is used to read data from Excel sheet
+	@Keyword
+	public void readExcel(String filePath,String fileName,String sheetName) throws IOException{
+		DataFormatter objDefaultFormat = new DataFormatter();
+		FormulaEvaluator objFormulaEvaluator;
+		try {
+			File file =    new File(filePath+"\\"+fileName);
+			FileInputStream inputStream = new FileInputStream(file);
+			Workbook Workbook = null;
+			String fileExtensionName = fileName.substring(fileName.indexOf("."));
+			if(fileExtensionName.equals(".xlsx")){
+				Workbook = new XSSFWorkbook(inputStream);
+				objFormulaEvaluator = new XSSFFormulaEvaluator((XSSFWorkbook) Workbook);
+			}
+			else if(fileExtensionName.equals(".xls")){
+				Workbook = new HSSFWorkbook(inputStream);
+				objFormulaEvaluator = new HSSFFormulaEvaluator((HSSFWorkbook) Workbook);
+			}
+			Sheet Sheet = Workbook.getSheetAt(0);
+			int rowCount = Sheet.getLastRowNum()-Sheet.getFirstRowNum();
+			for (int i = 0; i < rowCount+1; i++) { //i < rowCount+1
+				Row row = Sheet.getRow(i);
+				int noOfCells = row.getLastCellNum();
+				for (int j = 0; j <  noOfCells; j++) {
+					Cell cellValue = row.getCell(j);
+					objFormulaEvaluator.evaluate(cellValue); // This will evaluate the cell, And any type of cell will return string value
+					String cellValueStr = objDefaultFormat.formatCellValue(cellValue,objFormulaEvaluator);
+					System.out.print(cellValueStr+"|| ");
+				}
+				System.out.println();
+			}
+		}
+		catch(NullPointerException e)
+		{
+		}
+		finally {
+		}
 	}
 
 

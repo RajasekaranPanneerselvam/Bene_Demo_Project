@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="TestSuite" time="613.576" tests="1" errors="0" skipped="0" failures="1">
+  <properties>
+    <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
+    <property name="sun.boot.library.path" value="C:\Program Files\Java\jdk1.8.0_102\jre\bin"/>
+    <property name="java.vm.version" value="25.102-b14"/>
+    <property name="java.vm.vendor" value="Oracle Corporation"/>
+    <property name="java.vendor.url" value="http://java.oracle.com/"/>
+    <property name="path.separator" value=";"/>
+    <property name="guice.disable.misplaced.annotation.check" value="true"/>
+    <property name="java.vm.name" value="Java HotSpot(TM) 64-Bit Server VM"/>
+    <property name="file.encoding.pkg" value="sun.io"/>
+    <property name="user.script" value=""/>
+    <property name="user.country" value="US"/>
+    <property name="sun.java.launcher" value="SUN_STANDARD"/>
+    <property name="sun.os.patch.level" value="Service Pack 1"/>
+    <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
+    <property name="user.dir" value="D:\Aspire_Framework\Selenium-Java\V2.1\Generic Framework Java\Aspire_Generic_Framework_Java"/>
+    <property name="java.runtime.version" value="1.8.0_102-b14"/>
+    <property name="java.awt.graphicsenv" value="sun.awt.Win32GraphicsEnvironment"/>
+    <property name="java.endorsed.dirs" value="C:\Program Files\Java\jdk1.8.0_102\jre\lib\endorsed"/>
+    <property name="os.arch" value="amd64"/>
+    <property name="java.io.tmpdir" value="C:\Users\NANDHI~1.ASP\AppData\Local\Temp\"/>
+    <property name="line.separator" value="&#10;"/>
+    <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
+    <property name="user.variant" value=""/>
+    <property name="os.name" value="Windows 7"/>
+    <property name="classworlds.conf" value="D:\Ant\apache-maven-3.0.3\bin\..\bin\m2.conf"/>
+    <property name="sun.jnu.encoding" value="Cp1252"/>
+    <property name="java.library.path" value="C:\Program Files\Java\jdk1.8.0_102\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:\Program Files\Common Files\Microsoft Shared\Windows Live;C:\Program Files (x86)\Common Files\Microsoft Shared\Windows Live;D:\Ant\apache-maven-3.0.3\bin;C:\Program Files\Java\jdk1.8.0_102\bin;C:\ProgramData\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files (x86)\Universal Extractor;C:\Program Files (x86)\Universal Extractor\bin;D:\bin;C:\Program Files (x86)\ZipGenius 6\;C:\Program Files (x86)\Skype\Phone\;."/>
+    <property name="java.specification.name" value="Java Platform API Specification"/>
+    <property name="java.class.version" value="52.0"/>
+    <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
+    <property name="maven.repo.local" value="C:\Users\nandhini.bala.ASPIRESYS\.m2\repository"/>
+    <property name="os.version" value="6.1"/>
+    <property name="user.home" value="C:\Users\nandhini.bala.ASPIRESYS"/>
+    <property name="user.timezone" value="Asia/Calcutta"/>
+    <property name="java.awt.printerjob" value="sun.awt.windows.WPrinterJob"/>
+    <property name="java.specification.version" value="1.8"/>
+    <property name="file.encoding" value="Cp1252"/>
+    <property name="user.name" value="nandhini.bala"/>
+    <property name="java.class.path" value="D:\Ant\apache-maven-3.0.3\bin\..\boot\plexus-classworlds-2.4.jar"/>
+    <property name="java.vm.specification.version" value="1.8"/>
+    <property name="sun.arch.data.model" value="64"/>
+    <property name="java.home" value="C:\Program Files\Java\jdk1.8.0_102\jre"/>
+    <property name="sun.java.command" value="org.codehaus.plexus.classworlds.launcher.Launcher clean test -Dmaven.repo.local=C:\Users\nandhini.bala.ASPIRESYS\.m2\repository -DTestNGSuite=testxml/web/AspireTA_Java_Framework_Web_Demo.xml"/>
+    <property name="java.specification.vendor" value="Oracle Corporation"/>
+    <property name="user.language" value="en"/>
+    <property name="awt.toolkit" value="sun.awt.windows.WToolkit"/>
+    <property name="java.vm.info" value="mixed mode"/>
+    <property name="java.version" value="1.8.0_102"/>
+    <property name="java.ext.dirs" value="C:\Program Files\Java\jdk1.8.0_102\jre\lib\ext;C:\Windows\Sun\Java\lib\ext"/>
+    <property name="sun.boot.class.path" value="C:\Program Files\Java\jdk1.8.0_102\jre\lib\resources.jar;C:\Program Files\Java\jdk1.8.0_102\jre\lib\rt.jar;C:\Program Files\Java\jdk1.8.0_102\jre\lib\sunrsasign.jar;C:\Program Files\Java\jdk1.8.0_102\jre\lib\jsse.jar;C:\Program Files\Java\jdk1.8.0_102\jre\lib\jce.jar;C:\Program Files\Java\jdk1.8.0_102\jre\lib\charsets.jar;C:\Program Files\Java\jdk1.8.0_102\jre\lib\jfr.jar;C:\Program Files\Java\jdk1.8.0_102\jre\classes"/>
+    <property name="TestNGSuite" value="testxml/web/AspireTA_Java_Framework_Web_Demo.xml"/>
+    <property name="sun.stderr.encoding" value="cp437"/>
+    <property name="java.vendor" value="Oracle Corporation"/>
+    <property name="maven.home" value="D:\Ant\apache-maven-3.0.3\bin\.."/>
+    <property name="file.separator" value="\"/>
+    <property name="java.vendor.url.bug" value="http://bugreport.sun.com/bugreport/"/>
+    <property name="sun.cpu.endian" value="little"/>
+    <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
+    <property name="sun.stdout.encoding" value="cp437"/>
+    <property name="sun.desktop" value="windows"/>
+    <property name="sun.cpu.isalist" value="amd64"/>
+  </properties>
+  <testcase name="tcTAFrameworkJAVADemo01" classname="com.TAFrameworkJAVA.testscripts.demo.AspireTA_Java_Framework_Demo" time="611.77">
+    <failure message="ERROR Internal Server Error (WARNING: The server did not provide any stacktrace information)&#10;Command duration or timeout: 180.19 seconds&#10;Build info: version: &apos;2.53.1&apos;, revision: &apos;a36b8b1cd5757287168e54b817830adce9b0158d&apos;, time: &apos;2016-06-30 19:26:09&apos;&#10;System info: host: &apos;aspire1235&apos;, ip: &apos;11.16.10.206&apos;, os.name: &apos;Windows 7&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.1&apos;, java.version: &apos;1.8.0_102&apos;&#10;Driver info: org.openqa.selenium.remote.RemoteWebDriver&#10;Capabilities [{applicationCacheEnabled=false, rotatable=false, mobileEmulationEnabled=false, chrome={}, takesHeapSnapshot=true, hasMetadata=true, databaseEnabled=false, hasTouchScreen=false, handlesAlerts=true, version=39.0.0.0, platform=ANDROID, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=true, webdriver.remote.sessionid=714c122c69304a5d85f35bc1628cf290, webStorageEnabled=true, locationContextEnabled=true, takesScreenshot=true, browserName=chrome, javascriptEnabled=true, cssSelectorsEnabled=true}]&#10;Session ID: 714c122c69304a5d85f35bc1628cf290" type="org.openqa.selenium.WebDriverException">org.openqa.selenium.WebDriverException: 
+ERROR Internal Server Error (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 180.19 seconds
+Build info: version: '2.53.1', revision: 'a36b8b1cd5757287168e54b817830adce9b0158d', time: '2016-06-30 19:26:09'
+System info: host: 'aspire1235', ip: '11.16.10.206', os.name: 'Windows 7', os.arch: 'amd64', os.version: '6.1', java.version: '1.8.0_102'
+Driver info: org.openqa.selenium.remote.RemoteWebDriver
+Capabilities [{applicationCacheEnabled=false, rotatable=false, mobileEmulationEnabled=false, chrome={}, takesHeapSnapshot=true, hasMetadata=true, databaseEnabled=false, hasTouchScreen=false, handlesAlerts=true, version=39.0.0.0, platform=ANDROID, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=true, webdriver.remote.sessionid=714c122c69304a5d85f35bc1628cf290, webStorageEnabled=true, locationContextEnabled=true, takesScreenshot=true, browserName=chrome, javascriptEnabled=true, cssSelectorsEnabled=true}]
+Session ID: 714c122c69304a5d85f35bc1628cf290
+	at com.TAFrameworkJAVA.testscripts.demo.AspireTA_Java_Framework_Demo.tcTAFrameworkJAVADemo01(AspireTA_Java_Framework_Demo.java:58)
+</failure>
+    <system-out><![CDATA[...
+... TestNG 6.9.4 by Cédric Beust (cedric@beust.com)
+...
+
+name bnandhini1234
+26-May-2017 13:30:24:033 INFO  [PoolService-0]  
+26-May-2017 13:30:24:075 INFO  [PoolService-0] ****             Sample test[Browser&5.1&Android || GOOGLE ]             ***** 
+26-May-2017 13:30:24:075 INFO  [PoolService-0]  
+26-May-2017 13:30:27:970 DEBUG [PoolService-0] Page URL:: https://www.google.com/ 
+26-May-2017 13:30:30:476 DEBUG [PoolService-0] Page URL:: https://www.google.com/ 
+26-May-2017 13:30:31:811 DEBUG [PoolService-0] Element is displayed:: [[RemoteWebDriver: chrome on ANDROID (714c122c69304a5d85f35bc1628cf290)] -> css selector: #lst-ib] 
+26-May-2017 13:30:31:811 INFO  [PoolService-0] Step 1. Navigated to 'google' Home Page! 
+26-May-2017 13:30:32:620 DEBUG [PoolService-0] Element is displayed:: [[RemoteWebDriver: chrome on ANDROID (714c122c69304a5d85f35bc1628cf290)] -> css selector: #lst-ib] 
+26-May-2017 13:30:35:338 DEBUG [PoolService-0] Element is displayed:: [[RemoteWebDriver: chrome on ANDROID (714c122c69304a5d85f35bc1628cf290)] -> css selector: div.sbico] 
+26-May-2017 13:30:44:175 DEBUG [PoolService-0] Page URL:: https://www.google.com/search?site=&source=hp&ei=moanwywqhuhr0glaoymi&q=text&oq=text&gs_l=mobile-gws-hp.12..0l5.9239.9275.0.10936.5.3.0.1.1.0.149.331.1j2.3.0....0...1..64.mobile-gws-hp..2.2.271.0..0i131k1.bo6zz7anjpu 
+26-May-2017 13:39:44:538 INFO  [PoolService-0] ****             -E---N---D-             ***** 
+]]></system-out>
+    <system-err><![CDATA[SLF4J: Class path contains multiple SLF4J bindings.
+SLF4J: Found binding in [jar:file:/C:/Users/nandhini.bala.ASPIRESYS/.m2/repository/org/slf4j/slf4j-log4j12/1.7.21/slf4j-log4j12-1.7.21.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+SLF4J: Found binding in [jar:file:/C:/Users/nandhini.bala.ASPIRESYS/.m2/repository/org/apache/jmeter/ApacheJMeter_core/3.0/ApacheJMeter_core-3.0.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+SLF4J: See http://www.slf4j.org/codes.html#multiple_bindings for an explanation.
+SLF4J: Actual binding is of type [org.slf4j.impl.Log4jLoggerFactory]
+]]></system-err>
+  </testcase>
+</testsuite>

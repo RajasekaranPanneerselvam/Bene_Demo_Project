@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+
+<suite name="AFTA_TEST" verbose="3"  parallel="tests" thread-count="500" >
+    <parameter name="securityTest" value="false" />   
+    
+	<parameter name="deviceHost" value="localhost" />
+	<parameter name="devicePort" value="4444" />
+	<parameter name="browserName" value="chrome_windows" /> 
+	<parameter name="ZAP_Location" value="C:\\Program Files\\OWASP\\Zed Attack Proxy\\" />
+	<parameter name="SAVE_SESSION_DIRECTORY" value="D:\\ZAPSessions\\" /> 	  	 
+	<parameter name="webSite" value="https://systems.aspiresys.com_Aspire" />   
+	<parameter name="aspireProxyAddress" value="proxy.aspiresys.com" />
+	<parameter name="aspirePortNumber" value="3128" />
+		
+<!-- 	<parameter name="soapProjectLoc" value="src/main/resources/projects/HGSystemTest-soapui-project.xml" />
+	<parameter name="soapSuiteName" value="HGSystemTest" />
+	<parameter name="soapTestCaseName" value="HGSystemTest" />
+	<parameter name="soapTestStepName" value="createPerson" />  -->
+	
+	<test name="Aspire TA Generic Framework" parallel="true">
+	    <classes>
+	      <class name="com.AFTA.test.SecurityCodeAndOCRTests"/>   
+				<!-- <methods>
+					<include name="readTextFromFiles"></include>
+				</methods>	 -->      
+	    </classes>
+	</test>
+ </suite>

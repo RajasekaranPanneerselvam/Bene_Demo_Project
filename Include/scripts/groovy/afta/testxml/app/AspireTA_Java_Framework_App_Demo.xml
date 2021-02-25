@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+
+<suite name="AFTA_DEMO" verbose="3"  parallel="tests" thread-count="5" >
+    <parameter name="securityTest" value="false" />   
+    
+	<parameter name="deviceHost" value="" />
+	<parameter name="devicePort" value="" />
+	<parameter name="browserName" value="" /> 
+	<parameter name="ZAP_Location" value="C:\\Program Files\\OWASP\\Zed Attack Proxy\\" />
+	<parameter name="SAVE_SESSION_DIRECTORY" value="D:\\ZAPSessions\\" /> 	  	 
+	<parameter name="webSite" value="https://www.google.com_google" />   
+		
+	<parameter name="soapProjectLoc" value="src/main/resources/projects/HGSystemTest-soapui-project.xml" />
+	<parameter name="soapSuiteName" value="HGSystemTest" />
+	<parameter name="soapTestCaseName" value="HGSystemTest" />
+	<parameter name="soapTestStepName" value="createPerson" /> 
+	
+	<test name="Aspire TA Generic Framework">
+	    <classes>
+	      <class name="com.TAFrameworkJAVA.apptestscripts.demo.AspireTA_Java_Framework_Demo"/>
+	    </classes>
+	</test>
+ </suite>

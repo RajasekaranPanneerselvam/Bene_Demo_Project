@@ -1,0 +1,115 @@
+<html>
+<head>
+<title>TestNG:  Default test</title>
+<link href="../testng.css" rel="stylesheet" type="text/css" />
+<link href="../my-testng.css" rel="stylesheet" type="text/css" />
+
+<style type="text/css">
+.log { display: none;} 
+.stack-trace { display: none;} 
+</style>
+<script type="text/javascript">
+<!--
+function flip(e) {
+  current = e.style.display;
+  if (current == 'block') {
+    e.style.display = 'none';
+    return 0;
+  }
+  else {
+    e.style.display = 'block';
+    return 1;
+  }
+}
+
+function toggleBox(szDivId, elem, msg1, msg2)
+{
+  var res = -1;  if (document.getElementById) {
+    res = flip(document.getElementById(szDivId));
+  }
+  else if (document.all) {
+    // this is the way old msie versions work
+    res = flip(document.all[szDivId]);
+  }
+  if(elem) {
+    if(res == 0) elem.innerHTML = msg1; else elem.innerHTML = msg2;
+  }
+
+}
+
+function toggleAllBoxes() {
+  if (document.getElementsByTagName) {
+    d = document.getElementsByTagName('div');
+    for (i = 0; i < d.length; i++) {
+      if (d[i].className == 'log') {
+        flip(d[i]);
+      }
+    }
+  }
+}
+
+// -->
+</script>
+
+</head>
+<body>
+<h2 align='center'>Default test</h2><table border='1' align="center">
+<tr>
+<td>Tests passed/Failed/Skipped:</td><td>1/0/0</td>
+</tr><tr>
+<td>Started on:</td><td>Thu Aug 25 15:29:33 IST 2016</td>
+</tr>
+<tr><td>Total time:</td><td>28 seconds (28099 ms)</td>
+</tr><tr>
+<td>Included groups:</td><td></td>
+</tr><tr>
+<td>Excluded groups:</td><td></td>
+</tr>
+</table><p/>
+<small><i>(Hover the method name to see the test class name)</i></small><p/>
+<table width='100%' border='1' class='invocation-passed'>
+<tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='com.TAFrameworkJAVA.testscripts.demo.AspireTA_Java_Framework_PrefTest_Demo.tcTAFrameworkPrefTestDemo01()'><b>tcTAFrameworkPrefTestDemo01</b><br>Test class: com.TAFrameworkJAVA.testscripts.demo.AspireTA_Java_Framework_PrefTest_Demo<br>Test method: Search product in flipkart<br>Parameters: (Browser: chrome, Hub: Aspire1494, Node: LOCALHOST), chrome_WIN8_1<br/>
+<a href="#Output-1943548644" onClick='toggleBox("Output-1943548644", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1943548644" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1943548644">
+<div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 25 Aug 15:29:36 774 - <b>2</b> - Driver::initialize::Get - com.TAFrameworkJAVA.support.WebDriverFactory.get(WebDriverFactory.java:410)</small> </font> </div><br/>
+&emsp;<div class="test-title"> <strong><font size = "3" color = "#000080">Sample pref test[chrome_windows || FLIPKART ]</font> </strong> </div>&emsp;<div><strong>Steps:</strong></div><!-- Report -->&emsp;<br/>
+<div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 25 Aug 15:29:37 610 - Page URL:: data:,</small> </font> </div><br/>
+<div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 25 Aug 15:29:37 611 - <b>0</b> - Page Load Wait: (Sync) - com.TAFrameworkJAVA.support.Utils.waitForPageLoad(Utils.java:70)</small> </font> </div><br/>
+<div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 25 Aug 15:29:56 840 - Page URL:: https://www.flipkart.com/</small> </font> </div><br/>
+<div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 25 Aug 15:29:56 840 - <b>0</b> - Page Load Wait: (Sync) - com.TAFrameworkJAVA.support.Utils.waitForPageLoad(Utils.java:70)</small> </font> </div><br/>
+<div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 25 Aug 15:29:56 936 - Element is displayed:: [[RemoteWebDriver: chrome on WIN8_1 (d119e518-d670-47d4-9e4e-af721f99b721)] -> css selector: input[value='SEARCH'], input[type='submit'], .header-form-search button]</small> </font> </div><br/>
+<div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 25 Aug 15:29:57 404 - Page URL:: https://www.flipkart.com/</small> </font> </div><br/>
+<div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 25 Aug 15:29:57 405 - <b>0</b> - Page Load Wait: (Sync) - com.TAFrameworkJAVA.support.Utils.waitForPageLoad(Utils.java:70)</small> </font> </div><br/>
+<div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 25 Aug 15:29:57 999 - Page URL:: https://www.flipkart.com/</small> </font> </div><br/>
+<div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 25 Aug 15:29:57 999 - <b>0</b> - Page Load Wait: (Sync) - com.TAFrameworkJAVA.support.Utils.waitForPageLoad(Utils.java:70)</small> </font> </div><br/>
+<div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 25 Aug 15:29:58 050 - Element is displayed:: [[RemoteWebDriver: chrome on WIN8_1 (d119e518-d670-47d4-9e4e-af721f99b721)] -> css selector: input[value='SEARCH'], input[type='submit'], .header-form-search button]</small> </font> </div><br/>
+<div class="test-message">&emsp;Step 1. Navigated to 'flipkart' Home Page!</div><br/>
+<div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 25 Aug 15:29:58 122 - Element is displayed:: [[RemoteWebDriver: chrome on WIN8_1 (d119e518-d670-47d4-9e4e-af721f99b721)] -> css selector: input[name='q']]</small> </font> </div><br/>
+<div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 25 Aug 15:29:58 302 - Element is displayed:: [[RemoteWebDriver: chrome on WIN8_1 (d119e518-d670-47d4-9e4e-af721f99b721)] -> css selector: input[value='SEARCH'], input[type='submit'], .header-form-search button]</small> </font> </div><br/>
+<div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 25 Aug 15:29:58 537 - Page URL:: https://www.flipkart.com/search?q=jean&otracker=start&as-show=off&as=off</small> </font> </div><br/>
+<div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 25 Aug 15:29:58 537 - <b>0</b> - Page Load Wait: (Sync) - com.TAFrameworkJAVA.support.Utils.waitForPageLoad(Utils.java:70)</small> </font> </div><br/>
+<div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 25 Aug 15:29:58 538 - <b>0</b> - Searched the provided product! - com.TAFrameworkJAVA.pages.HomePage.searchProduct(HomePage.java:106)</small> </font> </div><br/>
+<div class="test-message">&emsp;Search result for Jean&emsp;<a href=".\ScreenShot\tcTAFrameworkPrefTestDemo01_1.png" target="_blank" >[ScreenShot]</a></div><br/>
+<div class="test-result"><br><font color="green"><strong> Test Passed.  </strong></font> </div>&emsp;<br/>
+<div class="test-message">&emsp;#################<b>PERF DATA</b>###################</div><br/>
+<div class="test-message">&emsp;<br></div><br/>
+<div class="test-message">&emsp;Call count : 91</div><br/>
+<div class="test-message">&emsp;Size : 0.9262275695800781 MB</div><br/>
+<div class="test-message">&emsp;Total load time : 87 seconds</div><br/>
+</div>
+</td>
+<td></td>
+<td>25</td>
+<td>com.TAFrameworkJAVA.testscripts.demo.AspireTA_Java_Framework_PrefTest_Demo@1f36e637</td></tr>
+</table><p>
+</body>
+</html>

@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+
+<suite name="AFTA_TEST" verbose="3" parallel="tests" thread-count="500">
+	<parameter name="securityTest" value="false" />
+
+	<parameter name="deviceHost" value="localhost" />
+	<parameter name="devicePort" value="4444" />
+	<parameter name="ZAP_Location"
+		value="C:\\Program Files\\OWASP\\Zed Attack Proxy\\" />
+	<parameter name="SAVE_SESSION_DIRECTORY" value="D:\\ZAPSessions\\" />
+	<parameter name="webSite" value="https://systems.aspiresys.com_Aspire" />
+
+	<parameter name="soapProjectLoc"
+		value="src/main/resources/projects/HGSystemTest-soapui-project.xml" />
+	<parameter name="soapSuiteName" value="HGSystemTest" />
+	<parameter name="soapTestCaseName" value="HGSystemTest" />
+	<parameter name="soapTestStepName" value="createPerson" />
+
+	<test name="Aspire TA Generic Framework Chrome" parallel="true">
+		<parameter name="browserName" value="chrome_windows" />
+		<classes>
+			<class name="com.AFTA.test.Login">
+				<methods>
+					<include name="searchAspirianAndVerify"></include>
+				</methods>
+			</class>
+		</classes>
+	</test>
+	<test name="Aspire TA Generic Framework Edge" parallel="true">
+		<parameter name="browserName" value="edge_windows" />
+		<classes>
+			<class name="com.AFTA.test.Login">
+				<methods>
+					<include name="verifyLogin"></include>
+				</methods>
+			</class>
+		</classes>
+	</test>
+	<test name="Aspire TA Generic Framework Firefox" parallel="true">
+		<parameter name="browserName" value="firefox_windows" />
+		<classes>
+			<class name="com.AFTA.test.Login">
+				<methods>
+					<include name="verifyLogin"></include>
+				</methods>
+			</class>
+		</classes>
+	</test>
+</suite>

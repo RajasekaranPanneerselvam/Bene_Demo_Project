@@ -1,0 +1,15 @@
+-------------------------------------------------------------------------------
+Test set: TestSuite
+-------------------------------------------------------------------------------
+Tests run: 1, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 613.576 sec <<< FAILURE! - in TestSuite
+tcTAFrameworkJAVADemo01(com.TAFrameworkJAVA.testscripts.demo.AspireTA_Java_Framework_Demo)  Time elapsed: 611.77 sec  <<< FAILURE!
+org.openqa.selenium.WebDriverException: 
+ERROR Internal Server Error (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 180.19 seconds
+Build info: version: '2.53.1', revision: 'a36b8b1cd5757287168e54b817830adce9b0158d', time: '2016-06-30 19:26:09'
+System info: host: 'aspire1235', ip: '11.16.10.206', os.name: 'Windows 7', os.arch: 'amd64', os.version: '6.1', java.version: '1.8.0_102'
+Driver info: org.openqa.selenium.remote.RemoteWebDriver
+Capabilities [{applicationCacheEnabled=false, rotatable=false, mobileEmulationEnabled=false, chrome={}, takesHeapSnapshot=true, hasMetadata=true, databaseEnabled=false, hasTouchScreen=false, handlesAlerts=true, version=39.0.0.0, platform=ANDROID, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=true, webdriver.remote.sessionid=714c122c69304a5d85f35bc1628cf290, webStorageEnabled=true, locationContextEnabled=true, takesScreenshot=true, browserName=chrome, javascriptEnabled=true, cssSelectorsEnabled=true}]
+Session ID: 714c122c69304a5d85f35bc1628cf290
+	at com.TAFrameworkJAVA.testscripts.demo.AspireTA_Java_Framework_Demo.tcTAFrameworkJAVADemo01(AspireTA_Java_Framework_Demo.java:58)
+

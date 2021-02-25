@@ -1,0 +1,28 @@
+<configuration>
+
+  <appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
+    <!-- encoders are assigned the type
+         ch.qos.logback.classic.encoder.PatternLayoutEncoder by default -->
+    <encoder>
+      <pattern>%d{HH:mm:ss.SSS} [%thread] %-5level %logger{36} - %msg%n</pattern>
+    </encoder>
+  </appender>
+   <appender name="FILE" class="ch.qos.logback.core.FileAppender">
+      <file> automation-log.txt </file>
+      <append>true</append>
+      <encoder>
+         <pattern>%-4relative [%thread] %-5level %logger{35} - %msg%n</pattern>
+      </encoder>
+   </appender>
+	<logger name="org.apache" level="INFO" />
+	<logger name="org.littleshoot" level="ERROR" />
+	<logger name="net.lightbody" level="ERROR" />
+	<logger name="io.netty" level="INFO" />
+	<logger name="org.mongodb" level="WARN" />
+	<logger name="net.sf.uadetector" level="ERROR" />
+  <root level="debug">
+    <appender-ref ref="STDOUT" />
+    <appender-ref ref="FILE" />
+    
+  </root>
+</configuration>

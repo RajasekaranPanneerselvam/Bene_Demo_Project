@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+  <title>TestNG reports</title>
+
+    <link type="text/css" href="testng-reports.css" rel="stylesheet" />  
+    <script type="text/javascript" src="jquery-1.7.1.min.js"></script>
+    <script type="text/javascript" src="testng-reports.js"></script>
+    <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+    <script type='text/javascript'>
+      google.load('visualization', '1', {packages:['table']});
+      google.setOnLoadCallback(drawTable);
+      var suiteTableInitFunctions = new Array();
+      var suiteTableData = new Array();
+    </script>
+    <!--
+      <script type="text/javascript" src="jquery-ui/js/jquery-ui-1.8.16.custom.min.js"></script>
+     -->
+  </head>
+
+  <body>
+    <div class="top-banner-root">
+      <span class="top-banner-title-font">Test results</span>
+      <br/>
+      <span class="top-banner-font-1">1 suite, 1 failed test</span>
+    </div> <!-- top-banner-root -->
+    <div class="navigator-root">
+      <div class="navigator-suite-header">
+        <span>All suites</span>
+        <a href="#" class="collapse-all-link" title="Collapse/expand all the suites">
+          <img class="collapse-all-icon" src="collapseall.gif">
+          </img> <!-- collapse-all-icon -->
+        </a> <!-- collapse-all-link -->
+      </div> <!-- navigator-suite-header -->
+      <div class="suite">
+        <div class="rounded-window">
+          <div class="suite-header light-rounded-window-top">
+            <a href="#" class="navigator-link" panel-name="suite-AFTA_DEMO">
+              <span class="suite-name border-failed">AFTA_DEMO</span>
+            </a> <!-- navigator-link -->
+          </div> <!-- suite-header light-rounded-window-top -->
+          <div class="navigator-suite-content">
+            <div class="suite-section-title">
+              <span>Info</span>
+            </div> <!-- suite-section-title -->
+            <div class="suite-section-content">
+              <ul>
+                <li>
+                  <a href="#" class="navigator-link " panel-name="test-xml-AFTA_DEMO">
+                    <span>D:\Aspire_Framework\Selenium-Java\V2.1\Generic Framework Java\Aspire_Generic_Framework_Java\testxml\web\AspireTA_Java_Framework_Web_Demo.xml</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" class="navigator-link " panel-name="testlist-AFTA_DEMO">
+                    <span class="test-stats">1 test</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" class="navigator-link " panel-name="group-AFTA_DEMO">
+                    <span>0 groups</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" class="navigator-link " panel-name="times-AFTA_DEMO">
+                    <span>Times</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" class="navigator-link " panel-name="reporter-AFTA_DEMO">
+                    <span>Reporter output</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" class="navigator-link " panel-name="ignored-methods-AFTA_DEMO">
+                    <span>Ignored methods</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" class="navigator-link " panel-name="chronological-AFTA_DEMO">
+                    <span>Chronological view</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+              </ul>
+            </div> <!-- suite-section-content -->
+            <div class="result-section">
+              <div class="suite-section-title">
+                <span>Results</span>
+              </div> <!-- suite-section-title -->
+              <div class="suite-section-content">
+                <ul>
+                  <li>
+                    <span class="method-stats">1 method, 1 failed,   </span>
+                  </li>
+                  <li>
+                    <span class="method-list-title failed">Failed methods</span>
+                    <span class="show-or-hide-methods failed">
+                      <a href="#" panel-name="suite-AFTA_DEMO" class="hide-methods failed suite-AFTA_DEMO"> (hide)</a> <!-- hide-methods failed suite-AFTA_DEMO -->
+                      <a href="#" panel-name="suite-AFTA_DEMO" class="show-methods failed suite-AFTA_DEMO"> (show)</a> <!-- show-methods failed suite-AFTA_DEMO -->
+                    </span>
+                    <div class="method-list-content failed suite-AFTA_DEMO">
+                      <span>
+                        <img width="3%" src="failed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-AFTA_DEMO" title="com.TAFrameworkJAVA.testscripts.demo.AspireTA_Java_Framework_Demo" hash-for-method="tcTAFrameworkJAVADemo01(SauceLab link: &lt;a href=&#039;http://saucelabs.com/jobs/d42be43ece99431fa0ade239c3c96df0?auth=049d549997e3...)">tcTAFrameworkJAVADemo01(SauceLab link: <a href='http://saucelabs.com/jobs/d42be43ece99431fa0ade239c3c96df0?auth=049d549997e3...)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                    </div> <!-- method-list-content failed suite-AFTA_DEMO -->
+                  </li>
+                </ul>
+              </div> <!-- suite-section-content -->
+            </div> <!-- result-section -->
+          </div> <!-- navigator-suite-content -->
+        </div> <!-- rounded-window -->
+      </div> <!-- suite -->
+    </div> <!-- navigator-root -->
+    <div class="wrapper">
+      <div class="main-panel-root">
+        <div panel-name="suite-AFTA_DEMO" class="panel AFTA_DEMO">
+          <div class="suite-AFTA_DEMO-class-failed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="failed.png"/>
+              <span class="class-name">com.TAFrameworkJAVA.testscripts.demo.AspireTA_Java_Framework_Demo</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="tcTAFrameworkJAVADemo01(SauceLab link: &lt;a href=&#039;http://saucelabs.com/jobs/d42be43ece99431fa0ade239c3c96df0?auth=049d549997e3...)">
+                  </a> <!-- tcTAFrameworkJAVADemo01(SauceLab link: <a href='http://saucelabs.com/jobs/d42be43ece99431fa0ade239c3c96df0?auth=049d549997e3...) -->
+                  <span class="method-name">tcTAFrameworkJAVADemo01</span>
+                  <span class="parameters">(SauceLab link: <a href='http://saucelabs.com/jobs/d42be43ece99431fa0ade239c3c96df0?auth=049d549997e352bd2c307a4c714db0cf' target='_blank'>http://saucelabs.com/jobs/d42be43ece99431fa0ade239c3c96df0?auth=049d549997e352bd2c307a4c714db0cf</a>)</span>
+                  <div class="stack-trace">org.openqa.selenium.WebDriverException: An unknown server-side error occurred while processing the command. Original error: Could not proxy. Proxy error: Could not proxy command to remote server. Original error: Error: ESOCKETTIMEDOUT (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 240.51 seconds
+Build info: version: &apos;2.53.1&apos;, revision: &apos;a36b8b1cd5757287168e54b817830adce9b0158d&apos;, time: &apos;2016-06-30 19:26:09&apos;
+System info: host: &apos;aspire1235&apos;, ip: &apos;172.24.130.58&apos;, os.name: &apos;Windows 7&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.1&apos;, java.version: &apos;1.8.0_102&apos;
+Driver info: org.openqa.selenium.remote.RemoteWebDriver
+Capabilities [{noReset=true, webdriver.remote.quietExceptions=true, deviceName=emulator-5554, platform=LINUX, deviceUDID=emulator-5554, desired={proxy={proxyAutoconfigUrl=http://127.0.0.1:19876/pac.js, proxyType=PAC}, orientation=PORTRAIT, noReset=true, maxTypingFrequency=8, newCommandTimeout=0, platformVersion=5.1, webdriver.remote.quietExceptions=true, browserName=browser, udid=emulator-5554, platformName=Android, eventTimings=true, deviceName=Android Emulator}, maxTypingFrequency=8, newCommandTimeout=0, platformVersion=5.1.1, webStorageEnabled=false, takesScreenshot=true, browserName=browser, javascriptEnabled=true, deviceManufacturer=unknown, platformName=Android, udid=emulator-5554, deviceScreenSize=480x800, orientation=PORTRAIT, networkConnectionEnabled=true, warnings={}, hasMetadata=true, databaseEnabled=false, proxy={proxyAutoconfigUrl=http://127.0.0.1:19876/pac.js, proxyType=PAC}, webdriver.remote.sessionid=d42be43ece99431fa0ade239c3c96df0, locationContextEnabled=false, deviceModel=Android SDK built for x86_64, eventTimings=true}]
+Session ID: d42be43ece99431fa0ade239c3c96df0
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:206)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:158)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:678)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:701)
+	at org.openqa.selenium.remote.RemoteWebDriver.getScreenshotAs(RemoteWebDriver.java:335)
+	at com.TAFrameworkJAVA.support.ScreenshotManager.takeScreenshot(ScreenshotManager.java:26)
+	at com.TAFrameworkJAVA.support.Log.takeScreenShot(Log.java:130)
+	at com.TAFrameworkJAVA.support.Log.exception(Log.java:682)
+	at com.TAFrameworkJAVA.testscripts.demo.AspireTA_Java_Framework_Demo.tcTAFrameworkJAVADemo01(AspireTA_Java_Framework_Demo.java:58)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:85)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:659)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:845)
+	at org.testng.internal.TestMethodWithDataProviderMethodWorker.call(TestMethodWithDataProviderMethodWorker.java:75)
+	at org.testng.internal.TestMethodWithDataProviderMethodWorker.call(TestMethodWithDataProviderMethodWorker.java:14)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+
+</div> <!-- stack-trace -->
+                  <em>
+(Search product in flipkart)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-AFTA_DEMO-class-failed -->
+        </div> <!-- panel AFTA_DEMO -->
+        <div panel-name="test-xml-AFTA_DEMO" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">D:\Aspire_Framework\Selenium-Java\V2.1\Generic Framework Java\Aspire_Generic_Framework_Java\testxml\web\AspireTA_Java_Framework_Web_Demo.xml</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+            <pre>
+&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+&lt;!DOCTYPE suite SYSTEM &quot;http://testng.org/testng-1.0.dtd&quot;&gt;
+&lt;suite verbose=&quot;3&quot; name=&quot;AFTA_DEMO&quot; parallel=&quot;tests&quot;&gt;
+  &lt;parameter name=&quot;webSite&quot; value=&quot;https://www.google.com_google&quot;/&gt;
+  &lt;parameter name=&quot;soapSuiteName&quot; value=&quot;HGSystemTest&quot;/&gt;
+  &lt;parameter name=&quot;ZAP_Location&quot; value=&quot;C:\\Program Files\\OWASP\\Zed Attack Proxy\\&quot;/&gt;
+  &lt;parameter name=&quot;soapTestStepName&quot; value=&quot;createPerson&quot;/&gt;
+  &lt;parameter name=&quot;deviceHost&quot; value=&quot;localhost&quot;/&gt;
+  &lt;parameter name=&quot;SAVE_SESSION_DIRECTORY&quot; value=&quot;D:\\ZAPSessions\\&quot;/&gt;
+  &lt;parameter name=&quot;soapProjectLoc&quot; value=&quot;src/main/resources/projects/HGSystemTest-soapui-project.xml&quot;/&gt;
+  &lt;parameter name=&quot;devicePort&quot; value=&quot;4444&quot;/&gt;
+  &lt;parameter name=&quot;browserName&quot; value=&quot;Browser&quot;/&gt;
+  &lt;parameter name=&quot;securityTest&quot; value=&quot;false&quot;/&gt;
+  &lt;parameter name=&quot;soapTestCaseName&quot; value=&quot;HGSystemTest&quot;/&gt;
+  &lt;test name=&quot;Aspire TA Generic Framework&quot;&gt;
+    &lt;classes&gt;
+      &lt;class name=&quot;com.TAFrameworkJAVA.testscripts.demo.AspireTA_Java_Framework_Demo&quot;/&gt;
+    &lt;/classes&gt;
+  &lt;/test&gt; &lt;!-- Aspire TA Generic Framework --&gt;
+&lt;/suite&gt; &lt;!-- AFTA_DEMO --&gt;
+            </pre>
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="testlist-AFTA_DEMO" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">Tests for AFTA_DEMO</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+            <ul>
+              <li>
+                <span class="test-name">Aspire TA Generic Framework (1 class)</span>
+              </li>
+            </ul>
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="group-AFTA_DEMO" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">Groups for AFTA_DEMO</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="times-AFTA_DEMO" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">Times for AFTA_DEMO</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+            <div class="times-div">
+              <script type="text/javascript">
+suiteTableInitFunctions.push('tableData_AFTA_DEMO');
+function tableData_AFTA_DEMO() {
+var data = new google.visualization.DataTable();
+data.addColumn('number', 'Number');
+data.addColumn('string', 'Method');
+data.addColumn('string', 'Class');
+data.addColumn('number', 'Time (ms)');
+data.addRows(1);
+data.setCell(0, 0, 0)
+data.setCell(0, 1, 'tcTAFrameworkJAVADemo01')
+data.setCell(0, 2, 'com.TAFrameworkJAVA.testscripts.demo.AspireTA_Java_Framework_Demo')
+data.setCell(0, 3, 687306);
+window.suiteTableData['AFTA_DEMO']= { tableData: data, tableDiv: 'times-div-AFTA_DEMO'}
+return data;
+}
+              </script>
+              <span class="suite-total-time">Total running time: 11 minutes</span>
+              <div id="times-div-AFTA_DEMO">
+              </div> <!-- times-div-AFTA_DEMO -->
+            </div> <!-- times-div -->
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="reporter-AFTA_DEMO" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">Reporter output for AFTA_DEMO</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+            <div class="reporter-method-div">
+              <span class="reporter-method-name">tcTAFrameworkJAVADemo01(SauceLab link: <a href='http://saucelabs.com/jobs/d42be43ece99431fa0ade239c3c96df0?auth=049d549997e3...)</span>
+              <div class="reporter-method-output-div">
+                <span class="reporter-method-output">&emsp;<div class="test-title"> <strong><font size = "3" color = "#000080">Sample test[Browser&5.1&Android || GOOGLE ]</font> </strong> </div>&emsp;<div><strong>Steps:</strong></div><!-- Report -->&emsp;</span>
+                <span class="reporter-method-output"><div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 26 May 10:26:39 665 - Page URL:: https://www.google.com/</small> </font> </div></span>
+                <span class="reporter-method-output"><div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 26 May 10:26:42 478 - Page URL:: https://www.google.com/</small> </font> </div></span>
+                <span class="reporter-method-output"><div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 26 May 10:26:43 770 - Element is displayed:: [[RemoteWebDriver: browser on LINUX (d42be43ece99431fa0ade239c3c96df0)] -> css selector: #lst-ib]</small> </font> </div></span>
+                <span class="reporter-method-output"><div class="test-message">&emsp;Step 1. Navigated to 'google' Home Page!</div></span>
+                <span class="reporter-method-output"><div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 26 May 10:26:44 701 - Element is displayed:: [[RemoteWebDriver: browser on LINUX (d42be43ece99431fa0ade239c3c96df0)] -> css selector: #lst-ib]</small> </font> </div></span>
+                <span class="reporter-method-output"><div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 26 May 10:26:47 576 - Element is displayed:: [[RemoteWebDriver: browser on LINUX (d42be43ece99431fa0ade239c3c96df0)] -> css selector: div.sbico]</small> </font> </div></span>
+                <span class="reporter-method-output"><div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 26 May 10:26:54 412 - Page URL:: https://www.google.com/search?site=&source=hp&ei=g7unwcttj4we0wktrzcocw&q=text&oq=text&gs_l=mobile-gws-hp.12..0l5.9674.9793.0.11589.5.4.0.1.1.0.170.489.2j2.4.0.crnk_qsd...0...1..64.mobile-gws-hp..2.2.320.0..0i131k1.zqwzrx59nta</small> </font> </div></span>
+              </div> <!-- reporter-method-output-div -->
+            </div> <!-- reporter-method-div -->
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="ignored-methods-AFTA_DEMO" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">0 ignored methods</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="chronological-AFTA_DEMO" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">Methods in chronological order</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.TAFrameworkJAVA.testscripts.demo.AspireTA_Java_Framework_Demo</div> <!-- chronological-class-name -->
+              <div class="configuration-suite before">
+                <span class="method-name">beforeSuite</span>
+                <span class="method-start">0 ms</span>
+              </div> <!-- configuration-suite before -->
+              <div class="configuration-test before">
+                <span class="method-name">init(org.testng.TestRunner@6f615782)</span>
+                <span class="method-start">315 ms</span>
+              </div> <!-- configuration-test before -->
+              <div class="configuration-method before">
+                <span class="method-name">beforeMethod</span>
+                <span class="method-start">12305 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">tcTAFrameworkJAVADemo01(SauceLab link: <a href='http://saucelabs.com/jobs/d42be43ece99431fa0ade239c3c96df0?auth=049d549997e3...)</span>
+                <span class="method-start">12305 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">afterMethod(org.testng.TestRunner@6f615782)</span>
+                <span class="method-start">699623 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-suite after">
+                <span class="method-name">afterSuite</span>
+                <span class="method-start">699652 ms</span>
+              </div> <!-- configuration-suite after -->
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+      </div> <!-- main-panel-root -->
+    </div> <!-- wrapper -->
+  </body>
+</html>

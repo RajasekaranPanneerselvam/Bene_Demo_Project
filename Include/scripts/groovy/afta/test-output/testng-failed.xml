@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite verbose="3" name="Failed suite [AFTA_DEMO]" parallel="tests">
+  <parameter name="webSite" value="https://www.google.com_google"/>
+  <parameter name="soapSuiteName" value="HGSystemTest"/>
+  <parameter name="ZAP_Location" value="C:\\Program Files\\OWASP\\Zed Attack Proxy\\"/>
+  <parameter name="soapTestStepName" value="createPerson"/>
+  <parameter name="deviceHost" value="localhost"/>
+  <parameter name="SAVE_SESSION_DIRECTORY" value="D:\\ZAPSessions\\"/>
+  <parameter name="soapProjectLoc" value="src/main/resources/projects/HGSystemTest-soapui-project.xml"/>
+  <parameter name="devicePort" value="4444"/>
+  <parameter name="browserName" value="Browser"/>
+  <parameter name="securityTest" value="false"/>
+  <parameter name="soapTestCaseName" value="HGSystemTest"/>
+  <test name="Aspire TA Generic Framework(failed)" parallel="tests">
+    <classes>
+      <class name="com.TAFrameworkJAVA.testscripts.demo.AspireTA_Java_Framework_Demo">
+        <methods>
+          <include name="tcTAFrameworkJAVADemo01" invocation-numbers="0"/>
+          <include name="init"/>
+          <include name="beforeMethod"/>
+          <include name="afterMethod"/>
+          <include name="afterSuite"/>
+          <include name="beforeSuite"/>
+        </methods>
+      </class> <!-- com.TAFrameworkJAVA.testscripts.demo.AspireTA_Java_Framework_Demo -->
+    </classes>
+  </test> <!-- Aspire TA Generic Framework(failed) -->
+</suite> <!-- Failed suite [AFTA_DEMO] -->
