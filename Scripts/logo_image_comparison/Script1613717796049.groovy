@@ -1,4 +1,5 @@
 import static com.kms.katalon.core.checkpoint.CheckpointFactory.findCheckpoint
+
 import static com.kms.katalon.core.testcase.TestCaseFactory.findTestCase
 import static com.kms.katalon.core.testdata.TestDataFactory.findTestData
 import static com.kms.katalon.core.testobject.ObjectRepository.findTestObject
@@ -18,10 +19,20 @@ import internal.GlobalVariable as GlobalVariable
 import org.openqa.selenium.Keys
 import org.testng.Assert
 
+
+CustomKeywords.'genericMethods.generic_methods.test_info'("Navigating to URL")
 CustomKeywords.'genericMethods.generic_methods.navigate_to_url'(GlobalVariable.G_url);
+
+
+CustomKeywords.'genericMethods.generic_methods.test_info'("Logging into application")
 CustomKeywords.'helper_methods.helper_methods.loginToApplication'();
 
+CustomKeywords.'genericMethods.generic_methods.test_pass'("Logged in successfully")
+
 CustomKeywords.'genericMethods.generic_methods.wait_until_element_visible'(findTestObject('Login_UserInfoEdit_Logout/Page_BenefitHub/button_Guest'))
+
+
+CustomKeywords.'genericMethods.generic_methods.test_info'("Validating the Home page LOGO")
 
 CustomKeywords.'genericMethods.generic_methods.wait_until_element_visible'(findTestObject('Images/Homepage_Logo'))
 
@@ -29,5 +40,5 @@ CustomKeywords.'genericMethods.generic_methods.takeWebElementScreenshot'(findTes
 
 Assert.assertFalse(CustomKeywords.'genericMethods.generic_methods.compareImages'(findTestObject('Images/Homepage_Logo')))
 
-
+CustomKeywords.'genericMethods.generic_methods.test_pass'("Image Logo is as expected")
 

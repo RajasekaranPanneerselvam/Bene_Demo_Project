@@ -23,6 +23,7 @@ import com.kms.katalon.core.context.TestCaseContext
 import com.kms.katalon.core.context.TestSuiteContext
 
 import com.kms.katalon.core.webui.driver.DriverFactory
+import org.openqa.selenium.TakesScreenshot
 import org.openqa.selenium.WebDriver
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
@@ -33,16 +34,31 @@ import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.remote.CapabilityType;
 import org.openqa.selenium.ie.InternetExplorerDriver;
 
-class TestListener {
+import com.relevantcodes.extentreports.ExtentReports;
+import com.relevantcodes.extentreports.ExtentTest;
+import com.relevantcodes.extentreports.LogStatus;
+import java.io.File;
+import org.apache.commons.io.FileUtils;
+import genericMethods.generic_methods
+
+import org.testng.ITestContext ;
+import org.testng.ITestListener ;
+import org.testng.ITestResult 
+import org.testng.annotations.Listeners;
+
+
+public class TestListenerDemo{
 	/**
 	 * Executes before every test case starts.
 	 * @param testCaseContext related information of the executed test case.
 	 */
+
+	
 	@BeforeTestCase
 	def sampleBeforeTestCase(TestCaseContext testCaseContext) {
-		println testCaseContext.getTestCaseId()
-		println testCaseContext.getTestCaseVariables()
 		
+		(new generic_methods()).report = new ExtentReports(System.getProperty("user.dir")+ "_" + testCaseContext.getTestCaseId() + "_" + "ExtentReportResults.html");
+		(new generic_methods()).test = (new generic_methods()).report.startTest("Execute '" + testCaseContext.getTestCaseId() + "' Testcase");
 		
 		if(GlobalVariable.browser == "chrome")
 			{
@@ -61,7 +77,7 @@ class TestListener {
 				options.addArguments("--test-type");
 				
 				prefs.put("profile.default_content_settings.popups", 0)
-				prefs.put("download.prompt_for_download", "false")
+				prefs.put("download.prompt_for_download", false)
 				prefs.put("download.default_directory", System.getProperty("user.dir") + "/Imp Files")
 				
 				options.setExperimentalOption("prefs", prefs);
@@ -131,6 +147,9 @@ class TestListener {
 	def sampleAfterTestCase(TestCaseContext testCaseContext) {
 		println testCaseContext.getTestCaseId()
 		println testCaseContext.getTestCaseStatus()
+		
+		(new generic_methods()).report.endTest(new generic_methods().test);
+		(new generic_methods()).report.flush();
 		
 		WebUI.closeBrowser()
 	}

@@ -1,5 +1,6 @@
 package genericMethods
 
+
 import static com.kms.katalon.core.checkpoint.CheckpointFactory.findCheckpoint
 import static com.kms.katalon.core.testcase.TestCaseFactory.findTestCase
 import static com.kms.katalon.core.testdata.TestDataFactory.findTestData
@@ -8,8 +9,13 @@ import static com.kms.katalon.core.testobject.ObjectRepository.findWindowsObject
 
 import javax.imageio.ImageIO
 
+import com.kms.katalon.core.annotation.AfterTestCase
+import com.kms.katalon.core.annotation.AfterTestSuite
+import com.kms.katalon.core.annotation.BeforeTestCase
+import com.kms.katalon.core.annotation.BeforeTestSuite
 import com.kms.katalon.core.annotation.Keyword
 import com.kms.katalon.core.checkpoint.Checkpoint
+import com.kms.katalon.core.context.TestCaseContext
 import com.kms.katalon.core.cucumber.keyword.CucumberBuiltinKeywords as CucumberKW
 import com.kms.katalon.core.mobile.keyword.MobileBuiltInKeywords as Mobile
 import com.kms.katalon.core.model.FailureHandling
@@ -40,7 +46,10 @@ import org.apache.poi.xssf.usermodel.XSSFFormulaEvaluator
 import org.apache.poi.xssf.usermodel.XSSFWorkbook
 import org.openqa.selenium.*
 import org.testng.Assert
-
+import org.testng.ITestContext
+import org.testng.ITestListener
+import org.testng.ITestResult
+import org.testng.annotations.Listeners
 import ru.yandex.qatools.ashot.AShot
 import ru.yandex.qatools.ashot.Screenshot
 
@@ -57,62 +66,103 @@ import org.json.simple.parser.ParseException;
 import java.util.Iterator;
 
 
+import com.relevantcodes.extentreports.ExtentReports;
+import com.relevantcodes.extentreports.ExtentTest;
+import com.relevantcodes.extentreports.LogStatus;
+import java.io.File;
+import org.apache.commons.io.FileUtils;
+
+
 public class generic_methods {
 
 	//------------Yet to find solid solution for Internet Explorer Download prompt (OS Level popup) ----------- //
-		
+
 	//------------Please update path to driver (\\Katalon_Studio_Windows_64-7.9.1\\configuration\\resources\\drivers) in TestListener class ------------ //
-	
+
 	//------------Please update the hard code value (int rowCount = 1;) in writeExcel function ------------- //
-	
-	
+
+	public static ExtentTest test;
+	public static ExtentReports report;
+
+	@Keyword
+	public String takeScreenshot() {
+		// TODO Auto-generated method stub
+		WebDriver driver = DriverFactory.getWebDriver();
+		File scrFile = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
+		File Dest = new File(System.getProperty("user.dir") + System.currentTimeMillis()+ ".png");
+		FileUtils.copyFile(scrFile, Dest);
+		String errflpath = Dest.getAbsolutePath();
+		return errflpath;
+		//(new generic_methods()).test.log(LogStatus.FAIL, (new generic_methods()).test.addScreenCapture(errflpath)+"Test Failed");
+	}
+
+	@Keyword
+	public void test_fail(String message)
+	{
+		test.log(LogStatus.FAIL, test.addScreenCapture(takeScreenshot()), message);
+	}
+
+	@Keyword
+	public void test_info(String message)
+	{
+		test.log(LogStatus.INFO, message);
+	}
+
+	@Keyword
+	public void test_pass(String message)
+	{
+		test.log(LogStatus.PASS, message);
+	}
+
 	//This method will fetch record from text file by row/record index
 	@Keyword
 	public String read_record_from_text_file_by_index(int index)
 	{
+
+		test.log(LogStatus.PASS, "Navigated to the specified URL");
 		File f=new File(System.getProperty("user.dir") + "/Imp Files/text_file.txt");
 		Scanner sc= new Scanner(f);
-		
+
 		int i=0;
 		while(sc.hasNext())
 		{
 			if (i == index)
 				return sc.nextLine();
-				
+
 			else
 				sc.nextLine();
 			i++;
 		}
 		return null;
-	}	
-	
+	}
+
 	//This method will return record which matches the given (column) unique id  in a record
 	@Keyword
 	public String[] read_record_by_unique_key(char symbol, String key)
 	{
 		File f=new File(System.getProperty("user.dir") + "/Imp Files/text_file.txt");
 		Scanner sc= new Scanner(f);
-		
+
 		String str;
 		String[] res
 		while(sc.hasNext())
 		{
-			
+
 			str = sc.nextLine()
 			res = str.split("["+symbol+"]", 0);
 			for(String myStr: res) {
-			   if(myStr==key)
-				 return res;
+				if(myStr==key)
+					return res;
 			}
-					
+
 		}
 		return null;
 	}
-	
+
 	//This method will return value for a given Key from JSON file
 	@Keyword
 	public void getJsonValue(String jsonPath, String key) {
-		String result_value = "";	
+		String result_value = "";
 		FileReader reader = new FileReader(jsonPath)
 		JSONParser jsonParser = new JSONParser();
 		Object obj = jsonParser.parse(reader);
@@ -126,9 +176,9 @@ public class generic_methods {
 
 	public static void getKey(JSONObject json, String key) {
 
-		
+
 		boolean exists = json.has(key);
-		
+
 		Iterator<?> keys;
 		String nextKeys;
 		if (!exists) {
@@ -163,12 +213,12 @@ public class generic_methods {
 			}
 
 		} else {
-			 parseObject(json, key);
+			parseObject(json, key);
 		}
 
-		
+
 	}
-	
+
 	//User will be navigated to the specified URL in browser
 	@Keyword
 	public void navigate_to_url(String Url)
@@ -272,7 +322,7 @@ public class generic_methods {
 	@Keyword
 	public void wait_until_element_visible(TestObject object)
 	{
-		WebUI.waitForElementVisible(object, GlobalVariable.wait_for_element, FailureHandling.STOP_ONGlobalVariable.wait_for_elementILURE)
+		WebUI.waitForElementVisible(object, GlobalVariable.wait_for_element, FailureHandling.STOP_ON_FAILURE)
 	}
 
 	//This method is used to wait for a particular element to be present for the specified maximum wait time
